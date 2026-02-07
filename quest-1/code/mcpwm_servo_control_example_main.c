@@ -12,10 +12,12 @@
 static const char *TAG = "example";
 
 // Please consult the datasheet of your servo before changing the following parameters
-#define SERVO_MIN_PULSEWIDTH_US 500  // Minimum pulse width in microsecond
-#define SERVO_MAX_PULSEWIDTH_US 2500  // Maximum pulse width in microsecond
-#define SERVO_MIN_DEGREE        -90   // Minimum angle
-#define SERVO_MAX_DEGREE        90    // Maximum angle
+#define SERVO1_MIN_PULSEWIDTH_US 450  // Minimum pulse width in microsecond
+#define SERVO1_MAX_PULSEWIDTH_US 2050  // Maximum pulse width in microsecond
+#define SERVO2_MIN_PULSEWIDTH_US 500  // Minimum pulse width in microsecond
+#define SERVO2_MAX_PULSEWIDTH_US 2500  // Maximum pulse width in microsecond
+#define SERVO_MIN_DEGREE        -180   // Minimum angle
+#define SERVO_MAX_DEGREE        180    // Maximum angle
 
 #define SERVO_PULSE1_GPIO             12        // GPIO connects to the PWM signal line
 #define SERVO_PULSE2_GPIO             14        // GPIO connects to the PWM signal line
@@ -23,9 +25,14 @@ static const char *TAG = "example";
 #define SERVO_TIMEBASE_PERIOD        20000    // 20000 ticks, 20ms
 
 
-static inline uint32_t example_angle_to_compare(int angle)
+static inline uint32_t example1_angle_to_compare(int angle)
 {
-    return (angle - SERVO_MIN_DEGREE) * (SERVO_MAX_PULSEWIDTH_US - SERVO_MIN_PULSEWIDTH_US) / (SERVO_MAX_DEGREE - SERVO_MIN_DEGREE) + SERVO_MIN_PULSEWIDTH_US;
+    return (angle - SERVO_MIN_DEGREE) * (SERVO1_MAX_PULSEWIDTH_US - SERVO1_MIN_PULSEWIDTH_US) / (SERVO_MAX_DEGREE - SERVO_MIN_DEGREE) + SERVO1_MIN_PULSEWIDTH_US;
+}
+
+static inline uint32_t example2_angle_to_compare(int angle)
+{
+    return (angle - SERVO_MIN_DEGREE) * (SERVO2_MAX_PULSEWIDTH_US - SERVO2_MIN_PULSEWIDTH_US) / (SERVO_MAX_DEGREE - SERVO_MIN_DEGREE) + SERVO2_MIN_PULSEWIDTH_US;
 }
 
 void app_main(void)
@@ -66,7 +73,7 @@ void app_main(void)
     ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config1, &generator1));
 
     // set the initial compare value, so that the servo will spin to the center position
-    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example_angle_to_compare(0)));
+    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(-90)));
 
 
     //Servo 2
@@ -82,6 +89,7 @@ void app_main(void)
         .gen_gpio_num = SERVO_PULSE2_GPIO,
     };
     ESP_ERROR_CHECK(mcpwm_new_generator(oper, &generator_config2, &generator2));
+    ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(-90)));
 
     ESP_LOGI(TAG, "Set generator action on timer and compare event");
     ESP_ERROR_CHECK(mcpwm_generator_set_action_on_timer_event(generator1,
@@ -103,16 +111,17 @@ void app_main(void)
     
 
 
-    int angle = 0;
+    int start_angle1 = -90;
+    int start_angle2 = -90;
     int angle_switch = 60;
     //int step = 2;
     while (1) { 
         //ESP_LOGI(TAG, "Angle of rotation: %d", angle);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example_angle_to_compare(angle_switch)));
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example_angle_to_compare(angle_switch)));
+        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(angle_switch - start_angle1)));
         angle_switch *= -1;
+        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(angle_switch + start_angle2)));
         //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
-        vTaskDelay(pdMS_TO_TICKS(2000));
+        vTaskDelay(pdMS_TO_TICKS(1500));
        // if ((angle + step) > 60 || (angle + step) < -60) {
         //    step *= -1;
         //}
