@@ -3,6 +3,8 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "driver/mcpwm_prelude.h"
+#include "driver/gptimer.h"
+#include "esp_attr.h"
 
 static const char *TAG = "example";
 
@@ -296,7 +298,6 @@ int set_brightness_max(uint8_t val) {
 #define ECHO_TEST_RXD GPIO_NUM_3   // USB serial RX
 #define ECHO_TEST_RTS UART_PIN_NO_CHANGE
 #define ECHO_TEST_CTS UART_PIN_NO_CHANGE
-static const char *TAG = "UART TEST";
 
 
 uart_config_t uart_config = {
@@ -338,6 +339,74 @@ static void update_display_buffer() {
     for (int i = 4; i < 8; i++) {
         displaybuffer[i] = 0x0000;
     }
+}
+
+static uint16_t getCharPattern(char c) {
+    int idx = (int)c;
+    if (idx < 0 || idx > 127) return 0;
+    return alphafonttable[idx];
+}
+
+static void write_display_countdown(uint8_t val) {
+    char text[4] = {' ', ' ', ' ', ' '};
+    text[0] = (val / 10) + '0';
+    text[1] = (val % 10) + '0';
+
+    for (int i = 0; i < 8; i++) {
+        displaybuffer[i] = 0x0000;
+    }
+    for (int i = 0; i < 4; i++) {
+        displaybuffer[i] = getCharPattern(text[i]);
+    }
+
+    i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
+    i2c_master_start(cmd4);
+    i2c_master_write_byte(cmd4, (SLAVE_ADDR << 1) | WRITE_BIT, ACK_CHECK_EN);
+    i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
+    for (uint8_t i = 0; i < 8; i++) {
+        i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
+        i2c_master_write_byte(cmd4, displaybuffer[i] >> 8, ACK_CHECK_EN);
+    }
+    i2c_master_stop(cmd4);
+    i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
+    i2c_cmd_link_delete(cmd4);
+}
+
+static volatile uint8_t countdown = 5;
+static volatile uint8_t countdown_done = 0;
+
+static bool IRAM_ATTR on_timer_alarm(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data) {
+    if (countdown > 0) {
+        countdown--;
+        if (countdown == 0) {
+            countdown_done = 1;
+        }
+    }
+    return false;
+}
+
+static void init_countdown_timer(void) {
+    gptimer_config_t timer_config = {
+        .clk_src = GPTIMER_CLK_SRC_DEFAULT,
+        .direction = GPTIMER_COUNT_UP,
+        .resolution_hz = 1000000,
+    };
+    gptimer_handle_t timer = NULL;
+    ESP_ERROR_CHECK(gptimer_new_timer(&timer_config, &timer));
+
+    gptimer_event_callbacks_t cbs = {
+        .on_alarm = on_timer_alarm,
+    };
+    ESP_ERROR_CHECK(gptimer_register_event_callbacks(timer, &cbs, NULL));
+
+    gptimer_alarm_config_t alarm_config = {
+        .alarm_count = 1000000,
+        .reload_count = 0,
+        .flags.auto_reload_on_alarm = true,
+    };
+    ESP_ERROR_CHECK(gptimer_set_alarm_action(timer, &alarm_config));
+    ESP_ERROR_CHECK(gptimer_enable(timer));
+    ESP_ERROR_CHECK(gptimer_start(timer));
 }
 
 
@@ -452,6 +521,8 @@ static void test_alpha_display() {
     uint8_t *data = (uint8_t *) malloc(17);
     int steps = 3; //default steps
     int temp = 3;
+    init_countdown_timer();
+
     //FULL LOOP
     while (1) {
         int len = uart_read_bytes(ECHO_UART_PORT_NUM, data, 16, 1000 / portTICK_PERIOD_MS); //10s before timeout
@@ -472,32 +543,32 @@ static void test_alpha_display() {
         }
 
         //COUNTDOWN LOGIC
-        update_display_buffer();
+        write_display_countdown(countdown);
 
-        // Send commands characters to display over I2C
-        i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
-        i2c_master_start(cmd4);
-        i2c_master_write_byte(cmd4, ( SLAVE_ADDR << 1 ) | WRITE_BIT, ACK_CHECK_EN);
-        i2c_master_write_byte(cmd4, (uint8_t)0x00, ACK_CHECK_EN);
-        for (uint8_t i=0; i<8; i++) {
-            i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
-            i2c_master_write_byte(cmd4, displaybuffer[i] >> 8, ACK_CHECK_EN);
+        if (countdown_done) {
+            countdown_done = 0;
+
+            //MOVE SERVOS THAT MANY STEPS (alternating "walk" motion)
+            int forward1 = start_angle1 + angle_switch;
+            int back1 = start_angle1 - angle_switch;
+            int forward2 = start_angle2 + angle_switch;
+            int back2 = start_angle2 - angle_switch;
+            for (int i = 0; i < steps; i++) {
+                // Servo 1 forward, Servo 2 back
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(forward1)));
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(back2)));
+                vTaskDelay(pdMS_TO_TICKS(600));
+
+                // Servo 1 back, Servo 2 forward
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(back1)));
+                ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(forward2)));
+                vTaskDelay(pdMS_TO_TICKS(600));
+            }
+
+            countdown = 5;
         }
-        i2c_master_stop(cmd4);
-        ret = i2c_master_cmd_begin(I2C_EXAMPLE_MASTER_NUM, cmd4, 1000 / portTICK_PERIOD_MS);
-        i2c_cmd_link_delete(cmd4);
-    
-        
-        //MOVE SERVOS THAT MANY STEPS
-        for(int i = 0; i < steps*2; i++){
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(angle_switch - start_angle1)));
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(-angle_switch + start_angle2)));
-            angle_switch *= -1;
-            //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
-            vTaskDelay(pdMS_TO_TICKS(1000));
-        }
 
-
+        vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
 
