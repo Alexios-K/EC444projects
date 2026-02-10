@@ -495,9 +495,10 @@ static void test_alpha_display() {
             angle_switch *= -1;
             //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
             vTaskDelay(pdMS_TO_TICKS(1000));
+        }
+
+
     }
-
-
 }
 
 
