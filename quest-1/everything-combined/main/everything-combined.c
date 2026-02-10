@@ -279,6 +279,66 @@ int set_brightness_max(uint8_t val) {
 }
 
 
+//UART SETUP
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/uart.h"
+#include "driver/gpio.h"
+#include "sdkconfig.h"
+#include "esp_log.h"
+
+
+#define ECHO_UART_PORT_NUM  UART_NUM_0
+#define ECHO_UART_BAUD_RATE 115200
+
+#define ECHO_TEST_TXD GPIO_NUM_1   // USB serial TX
+#define ECHO_TEST_RXD GPIO_NUM_3   // USB serial RX
+#define ECHO_TEST_RTS UART_PIN_NO_CHANGE
+#define ECHO_TEST_CTS UART_PIN_NO_CHANGE
+static const char *TAG = "UART TEST";
+
+
+uart_config_t uart_config = {
+    .baud_rate = ECHO_UART_BAUD_RATE,
+    .data_bits = UART_DATA_8_BITS,
+    .parity    = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .source_clk = UART_SCLK_DEFAULT,
+};
+
+int intr_alloc_flags = 0;
+
+
+static char text_buffer[16];
+static int text_len = 0;
+static int scroll_index = 0;
+uint16_t displaybuffer[8];
+
+static void update_display_buffer() {
+    for (int i = 0; i < 4; i++) {
+        int text_pos = scroll_index + i;
+
+        if (text_pos < text_len) {
+            char c = text_buffer[text_pos];
+            uint8_t idx = (uint8_t)c;
+            if (idx < 0x20 || idx > 0x7F) {
+                displaybuffer[i] = 0x0000;   // unsupported char
+            } else {
+                displaybuffer[i] = alphafonttable[idx - 0x20];
+            }
+        }
+        else{
+            displaybuffer[i] = 0x0000;   // blank
+        }
+    }
+
+    // Clear unused digits
+    for (int i = 4; i < 8; i++) {
+        displaybuffer[i] = 0x0000;
+    }
+}
 
 
 
@@ -286,10 +346,9 @@ int set_brightness_max(uint8_t val) {
 
 
 
-//MAIN 
-void app_main(void)
-{
-    //SERVO PORTION
+//MAIN FUNCTION FOR EVERYTHING
+static void test_alpha_display() {
+    //SERVO DEBUG + SETUP
     ESP_LOGI(TAG, "Create timer and operator");
     mcpwm_timer_handle_t timer = NULL;
     mcpwm_timer_config_t timer_config = {
@@ -358,39 +417,12 @@ void app_main(void)
     ESP_ERROR_CHECK(mcpwm_timer_enable(timer));
     ESP_ERROR_CHECK(mcpwm_timer_start_stop(timer, MCPWM_TIMER_START_NO_STOP));
 
-    
-
-
-
-
-
-
-
     int start_angle1 = -90;
     int start_angle2 = -90;
     int angle_switch = 60;
-    //int step = 2;
-    while (1) { 
-        //ESP_LOGI(TAG, "Angle of rotation: %d", angle);
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(angle_switch - start_angle1)));
-        ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(-angle_switch + start_angle2)));
-        angle_switch *= -1;
-        //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
-        vTaskDelay(pdMS_TO_TICKS(1000));
-       // if ((angle + step) > 60 || (angle + step) < -60) {
-        //    step *= -1;
-        //}
-       // angle += step;
-        }
-      
-}    
 
 
-
-
-//I2C main function
-static void test_alpha_display() {
-    // Debug
+    // LCD DEBUG
     int ret;
     printf(">> Test Alphanumeric Display: \n");
 
@@ -414,8 +446,33 @@ static void test_alpha_display() {
     //displaybuffer[1] = 0b0101001000001111;  // D.
     //displaybuffer[2] = 0b0100000000111001;  // C.
     //displaybuffer[3] = 0b0100000000111000;  // L.
+
+
+    //UART VARIABLES
+    uint8_t *data = (uint8_t *) malloc(17);
+    int steps = 3; //default steps
+    int temp = 3;
+    //FULL LOOP
     while (1) {
-        
+        int len = uart_read_bytes(ECHO_UART_PORT_NUM, data, 16, 1000 / portTICK_PERIOD_MS); //10s before timeout
+        if(len > 0){
+            data[len] = '\0';
+            if(data[len-1] == '\r'){
+                temp = atoi((char *)data); //parse angle
+                if(temp > 0 && temp < 10){ //check if angle is valid
+                    steps = temp;
+                }
+                else{
+                    steps = 3; //default steps
+                }
+            }
+            uart_write_bytes(ECHO_UART_PORT_NUM, (const char *) steps, len);
+            uart_write_bytes(ECHO_UART_PORT_NUM, "\r\n", 2);
+            uart_write_bytes(ECHO_UART_PORT_NUM, "Number of steps after countdown: ", 32);
+        }
+
+        //COUNTDOWN LOGIC
+        update_display_buffer();
 
         // Send commands characters to display over I2C
         i2c_cmd_handle_t cmd4 = i2c_cmd_link_create();
@@ -431,13 +488,20 @@ static void test_alpha_display() {
         i2c_cmd_link_delete(cmd4);
     
         
-        vTaskDelay(pdMS_TO_TICKS(500));
-        
+        //MOVE SERVOS THAT MANY STEPS
+        for(int i = 0; i < steps*2; i++){
+            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator1, example1_angle_to_compare(angle_switch - start_angle1)));
+            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator2, example2_angle_to_compare(-angle_switch + start_angle2)));
+            angle_switch *= -1;
+            //Add delay, since it takes time for servo to rotate, usually 200ms/60degree rotation under 5V power supply
+            vTaskDelay(pdMS_TO_TICKS(1000));
     }
 
 
 }
 
+
+//Actual main function, DON'T CHANGE
 void app_main() {
     i2c_example_master_init();
     i2c_scanner();
