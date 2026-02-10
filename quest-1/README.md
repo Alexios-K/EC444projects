@@ -1,12 +1,11 @@
-# Quest Name
+# Controllable 4 legged walker
 
-Authors: FirstName1 LastName1, FirstName2 LastName2, FirstName3 LastName 3
-
-Date: YYYY-MM-DD
+Authors: Jason Redick, Alexios Kontothanassis, Ivan Chen
+Date: 2026-02-09
 
 ### Summary
 
-Summarize what the quest is about and what you had to do to get it to work.
+In this quest, we built a four-legged walker using an ESP32 and two servos that moves at fixed time intervals. The ESP32 keeps accurate time using timers and updates a display every second to show how long until the next walk. When the timer reaches zero, the servos move back and forth for a set number of steps to push the walker forward, then stop. The time interval and number of steps can be changed dynamically using buttons or serial input, rather than being hard-coded.
 
 ### Solution Design
 
@@ -14,6 +13,7 @@ Describe how you built your solution. Use hardware and software
 diagrams, show data flow, include control flow or state charts if
 appropriate.
 
+The walker was built using two small breadboards with the servos sandwiched between them. The ESP32 was mounted on the bottom breadboard, while the I2C alphanumeric display was mounted on the top breadboard. Two servos were connected to separate GPIO pins on the ESP32 and powered from the board. Bent paper clips and cardboard were attached to the servo horns to form the four legs, allowing the back-and-forth servo motion to translate into forward movement.
 <p align="center">
 <img src="./images/ece444.png" width="50%">
 </p>
