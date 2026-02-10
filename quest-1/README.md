@@ -19,7 +19,8 @@ The walker was built using two small breadboards with the servos sandwiched betw
 </p>
 <p align="center">
 </p>
-
+[Link to video demo](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
+[Link to video demo]()
 ### Quest Summary
 
 The final system successfully tracked time, updated the display every second, and actuated the two servos at set intervals to move the walker forward. The walker moved forward in small hops rather than smooth steps, but the walking interval and number of steps were adjustable at runtime, meeting all core requirements of the quest.
