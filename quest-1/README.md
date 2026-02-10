@@ -21,8 +21,10 @@ The walker was built using two small breadboards with the servos sandwiched betw
 </p>
 
 ### Quest Summary
-Summarize your results and call out any challenges or things you would
-have done differently.
+
+The final system successfully tracked time, updated the display every second, and actuated the two servos at set intervals to move the walker forward. The walker moved forward in small hops rather than smooth steps, but the walking interval and number of steps were adjustable at runtime, meeting all core requirements of the quest.
+
+One challenge was keeping the walker stable, since the paper clip legs and cardboard body were flexible and moved around easily. Small changes to the leg shape or servo angles could change how the walker moved, so it took a lot of tuning to get consistent forward motion. Another challenge was making the servo movement smooth while still keeping accurate timing, because sudden movements sometimes caused slipping or turning. If done again, using a stiffer frame and more uniform legs would make the walker move more reliably.
 
 ### Investigative questions 
 1)The time interval can be made dynamic by using a single button with multi-click detection. The ESP32 measures the time between button presses and interprets double or triple clicks within a short time window as different interval settings. This allows the user to change the walking interval without hard-coding values or using the serial console. The selected interval is stored in a variable and applied immediately by the timer logic.
