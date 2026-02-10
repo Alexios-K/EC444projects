@@ -18,13 +18,16 @@ The walker was built using two small breadboards with the servos sandwiched betw
 <img src="./images/ece444.png" width="50%">
 </p>
 <p align="center">
-Template for Including Graphics
 </p>
 
 ### Quest Summary
 Summarize your results and call out any challenges or things you would
 have done differently.
 
+### Investigative questions 
+1)The time interval can be made dynamic by using a single button with multi-click detection. The ESP32 measures the time between button presses and interprets double or triple clicks within a short time window as different interval settings. This allows the user to change the walking interval without hard-coding values or using the serial console. The selected interval is stored in a variable and applied immediately by the timer logic.
+
+2)If the servos were attached to two different microcontrollers, they could share a single button or trigger signal. When the button is pressed, it sends a signal to a GPIO pin on both microcontrollers at the same time. Each microcontroller detects the signal and starts its servo routine simultaneously, keeping the servos synchronized and moving the walker forward together.
 
 ### Supporting Artifacts
 - Link to video technical presentation. Not to exceed 120s
