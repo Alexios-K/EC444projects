@@ -20,6 +20,7 @@ The walker was built using two small breadboards with the servos sandwiched betw
 <p align="center">
 </p>
 [Link to video demo](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
+
 [Link to video demo]()
 ### Quest Summary
 
