@@ -1,4 +1,5 @@
-//Ivan, Alexios, Jason
+//Names: Ivan Chen, Alexios Kontothanassis, Jason Redick. 
+//Date: Feb 10 2026
 
 //SERVO CODE 
 #include "freertos/FreeRTOS.h"
