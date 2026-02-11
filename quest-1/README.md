@@ -14,12 +14,10 @@ diagrams, show data flow, include control flow or state charts if
 appropriate.
 
 The walker was built using two small breadboards with the servos sandwiched between them. The ESP32 was mounted on the bottom breadboard, while the I2C alphanumeric display was mounted on the top breadboard. Two servos were connected to separate GPIO pins on the ESP32 and powered from the board. Bent paper clips and cardboard were attached to the servo horns to form the 2 legs, allowing the back-and-forth servo motion to translate into forward movement.
-<p align="center">
-<img src="./images/ece444.png" width="50%">
-</p>
-<p align="center">
-</p>
-[Link to video demo](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
+
+
+[Link to demo of walker moving](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
+[Link to our explanation of the walker](https://drive.google.com/file/d/15Zp4lx3EbolLwxlMYX8N7ncKG8XRcO42/view?usp=sharing)
 
 [Link to video demo]()
 ### Quest Summary
