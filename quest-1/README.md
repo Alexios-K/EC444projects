@@ -16,10 +16,6 @@ appropriate.
 The walker was built using two small breadboards with the servos sandwiched between them. The ESP32 was mounted on the bottom breadboard, while the I2C alphanumeric display was mounted on the top breadboard. Two servos were connected to separate GPIO pins on the ESP32 and powered from the board. Bent paper clips and cardboard were attached to the servo horns to form the 2 legs, allowing the back-and-forth servo motion to translate into forward movement.
 
 
-[Link to demo of walker moving](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
-[Link to our explanation of the walker](https://drive.google.com/file/d/15Zp4lx3EbolLwxlMYX8N7ncKG8XRcO42/view?usp=sharing)
-
-
 ### Quest Summary
 
 The final system successfully tracked time, updated the display every second, and actuated the two servos at set intervals to move the walker forward. The walker moved forward in small hops rather than smooth steps, but the walking interval and number of steps were adjustable at runtime, meeting all core requirements of the quest.
@@ -32,8 +28,8 @@ One challenge was keeping the walker stable, since the paper clip legs and cardb
 2)If the servos were attached to two different microcontrollers, they could share a single button or trigger signal. When the button is pressed, it sends a signal to a GPIO pin on both microcontrollers at the same time. Each microcontroller detects the signal and starts its servo routine simultaneously, keeping the servos synchronized and moving the walker forward together.
 
 ### Supporting Artifacts
-- Link to video technical presentation. Not to exceed 120s
-- Link to video demo. Not to exceed 120s
+[Link to demo of walker moving](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
+[Link to our explanation of the walker](https://drive.google.com/file/d/15Zp4lx3EbolLwxlMYX8N7ncKG8XRcO42/view?usp=sharing)
 
 ### Self-Assessment 
 
