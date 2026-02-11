@@ -31,6 +31,45 @@ One challenge was keeping the walker stable, since the paper clip legs and cardb
 [Link to demo of walker moving](https://drive.google.com/file/d/159decrbJsMb1kdTYzEwILRSoGXCeHu6Q/view?usp=drive_link)
 [Link to our explanation of the walker](https://drive.google.com/file/d/15Zp4lx3EbolLwxlMYX8N7ncKG8XRcO42/view?usp=sharing)
 
+
+Here are some images of our walker
+<p align="center">
+<img src="./images/IMG_9607.JPG" width="50%">
+</p>
+<p align="center">
+Template for Including Graphics
+</p>
+
+<p align="center">
+<img src="./images/IMG_9608.JPG" width="50%">
+</p>
+<p align="center">
+Template for Including Graphics
+</p>
+
+<p align="center">
+<img src="./images/IMG_9609.JPG" width="50%">
+</p>
+<p align="center">
+Template for Including Graphics
+</p>
+
+<p align="center">
+<img src="./images/IMG_9610.JPG" width="50%">
+</p>
+<p align="center">
+Template for Including Graphics
+</p>
+
+<p align="center">
+<img src="./images/IMG_9611.JPG" width="50%">
+</p>
+<p align="center">
+Template for Including Graphics
+</p>
+
+
+
 ### Self-Assessment 
 
 | Objective Criterion | Rating | Max Value  | 
