@@ -5,6 +5,7 @@
 #include "driver/mcpwm_prelude.h"
 #include "driver/gptimer.h"
 #include "esp_attr.h"
+#include <stdbool.h>
 
 static const char *TAG = "example";
 
@@ -374,8 +375,13 @@ static void write_display_countdown(uint8_t val) {
 
 static volatile uint8_t countdown = 5;
 static volatile uint8_t countdown_done = 0;
+static volatile bool countdown_started = false;
 
 static bool IRAM_ATTR on_timer_alarm(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data) {
+    if (!countdown_started) {
+        countdown_started = true;
+        return false;
+    }
     if (countdown > 0) {
         countdown--;
         if (countdown == 0) {
@@ -547,6 +553,8 @@ static void test_alpha_display() {
 
         if (countdown_done) {
             countdown_done = 0;
+            write_display_countdown(0);
+            vTaskDelay(pdMS_TO_TICKS(500));
 
             //MOVE SERVOS THAT MANY STEPS (alternating "walk" motion)
             int forward1 = start_angle1 + angle_switch;
@@ -566,6 +574,7 @@ static void test_alpha_display() {
             }
 
             countdown = 5;
+            countdown_started = false;
         }
 
         vTaskDelay(pdMS_TO_TICKS(50));
