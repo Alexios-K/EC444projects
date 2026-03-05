@@ -373,16 +373,12 @@ static void write_display_countdown(uint8_t val) {
     i2c_cmd_link_delete(cmd4);
 }
 
-static volatile uint8_t countdown = 5;
+static volatile uint8_t countdown = 6;
 static volatile uint8_t countdown_done = 0;
 static volatile bool countdown_started = false;
 
 static bool IRAM_ATTR on_timer_alarm(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data) {
-    if (!countdown_started) {
-        countdown_started = true;
-        return false;
-    }
-    if (countdown > 0) {
+    if (countdown > -1) {
         countdown--;
         if (countdown == 0) {
             countdown_done = 1;
@@ -511,19 +507,14 @@ static void test_alpha_display() {
     ret = set_brightness_max(0xF);
     if(ret == ESP_OK) {printf("- brightness: max \n");}
 
-    // Continually writes the same command
-    //ESP_ERROR_CHECK(uart_driver_install(ECHO_UART_PORT_NUM, 32, 0, 0, NULL, intr_alloc_flags));
-    //ESP_ERROR_CHECK(uart_param_config(ECHO_UART_PORT_NUM, &uart_config));
-    //ESP_ERROR_CHECK(uart_set_pin(ECHO_UART_PORT_NUM, ECHO_TEST_TXD, ECHO_TEST_RXD, ECHO_TEST_RTS, ECHO_TEST_CTS));
-
-    //uint16_t displaybuffer[8];
-    //displaybuffer[0] = 0b0101001000000001;  // T.
-    //displaybuffer[1] = 0b0101001000001111;  // D.
-    //displaybuffer[2] = 0b0100000000111001;  // C.
-    //displaybuffer[3] = 0b0100000000111000;  // L.
 
 
-    //UART VARIABLES
+
+    //UART SETUP+VARIABLES
+    ESP_ERROR_CHECK(uart_driver_install(ECHO_UART_PORT_NUM, 256, 0, 0, NULL, 0));
+    ESP_ERROR_CHECK(uart_param_config(ECHO_UART_PORT_NUM, &uart_config));
+    ESP_ERROR_CHECK(uart_set_pin(ECHO_UART_PORT_NUM, ECHO_TEST_TXD, ECHO_TEST_RXD, ECHO_TEST_RTS, ECHO_TEST_CTS));
+
     uint8_t *data = (uint8_t *) malloc(17);
     int steps = 3; //default steps
     int temp = 3;
@@ -543,7 +534,7 @@ static void test_alpha_display() {
                     steps = 3; //default steps
                 }
             }
-            uart_write_bytes(ECHO_UART_PORT_NUM, (const char *) steps, len);
+            uart_write_bytes(ECHO_UART_PORT_NUM, (const char *) data, len);
             uart_write_bytes(ECHO_UART_PORT_NUM, "\r\n", 2);
             uart_write_bytes(ECHO_UART_PORT_NUM, "Number of steps after countdown: ", 32);
         }
@@ -573,11 +564,10 @@ static void test_alpha_display() {
                 vTaskDelay(pdMS_TO_TICKS(600));
             }
 
-            countdown = 5;
-            countdown_started = false;
+            countdown = 6;
         }
 
-        vTaskDelay(pdMS_TO_TICKS(50));
+        //vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
 
