@@ -1,4 +1,4 @@
-# Quest Name
+#  Sensor Fusion Localization
 
 Authors: Jason Redick, Alexios Kontothanassis, Ivan Chen Date: 2026-03-05
 
