@@ -31,10 +31,19 @@
 
 #define ACCEL_ADDR                  ADXL343_ADDRESS
 
+//Double integration for accelerometer  
+static float vel_x = 0, vel_y = 0, vel_z = 0;
+static float pos_x = 0, pos_y = 0, pos_z = 0;
+#define ACCEL_BIAS_X  0.0f
+#define ACCEL_BIAS_Y  0.0f
+#define ACCEL_BIAS_Z  9.81f  // subtract gravity from Z at rest
+#define ACCEL_THRESHOLD 0.1f
+
+
 #define DEFAULT_VREF                1100
 #define NO_OF_SAMPLES               64
 static const adc_channel_t  adc_channel = ADC_CHANNEL_6;   // GPIO34
-static const adc_atten_t    adc_atten   = ADC_ATTEN_DB_0;
+static const adc_atten_t    adc_atten   = ADC_ATTEN_DB_12;
 static const adc_unit_t     adc_unit    = ADC_UNIT_1;
 static esp_adc_cal_characteristics_t *adc_chars;
 
@@ -185,12 +194,31 @@ static void accel_calc_roll_pitch(float x, float y, float z) {
 
 static void accel_task(void *pvParameters) {
     printf("Accelerometer Task Started\n");
+    const float dt = 0.5f;
     while (1) {
-        float xVal, yVal, zVal;
-        accel_get_values(&xVal, &yVal, &zVal);
-        printf("[ACCEL] X: %.2f\tY: %.2f\tZ: %.2f m/s^2\n", xVal, yVal, zVal);
-        accel_calc_roll_pitch(xVal, yVal, zVal);
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        float ax, ay, az;
+        accel_get_values(&ax, &ay, &az);
+
+        // Remove bias FIRST, before threshold
+        ax -= 0.04f;   // your measured resting X
+        ay -= -0.04f;  // your measured resting Y
+        az -= 9.18f;   // your measured resting Z (removes gravity)
+
+        // Now threshold filters only residual noise
+        if (fabs(ax) < ACCEL_THRESHOLD) ax = 0;
+        if (fabs(ay) < ACCEL_THRESHOLD) ay = 0;
+        if (fabs(az) < ACCEL_THRESHOLD) az = 0;
+
+        vel_x += ax * dt;
+        vel_y += ay * dt;
+        vel_z += az * dt;
+
+        pos_x += vel_x * dt;
+        pos_y += vel_y * dt;
+        pos_z += vel_z * dt;
+
+        printf("[ACCEL] Pos(m): X=%.2f Y=%.2f Z=%.2f\n", pos_x, pos_y, pos_z);
+        vTaskDelay(pdMS_TO_TICKS((int)(dt * 1000)));
     }
 }
 
@@ -235,8 +263,13 @@ static void ultrasonic_task(void *pvParameters) {
         adc_reading /= NO_OF_SAMPLES;
 
         uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
-        // MB1010 LV-MaxSonar: Vcc/512 per inch → at 3.3V: ~6.4mV/inch → convert to cm
-        float distance_cm = (voltage / 6.4f) * 2.54f;
+
+        // Undo voltage divider (3.3k / (2k+3.3k) = 0.623) to get actual sensor voltage
+        float sensor_voltage = voltage / 0.623f;
+
+        // MB1010 at 5V: Vcc/512 per inch = 9.77 mV/inch, convert inches to cm
+        float distance_cm = (sensor_voltage / 9.77f) * 2.54f;
+
         printf("[SONIC] Raw: %lu\tVoltage: %lumV\tDistance: %.1f cm\n",
                adc_reading, voltage, distance_cm);
         vTaskDelay(pdMS_TO_TICKS(1000));
