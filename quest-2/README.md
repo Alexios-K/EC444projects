@@ -40,7 +40,8 @@ have done differently.
 - [Link to video technical presentation](). Not to exceed 120s
 - [Link to video demo](https://drive.google.com/file/d/1nhvY1g3gkUNpFocvj2V990glKWTwxV2_/view?usp=drive_link).
 
-##Investigative question: Do you observe any patterns in the noise? How could you improve localization under the noisier scenarios? 
+## Investigative question: Do you observe any patterns in the noise? How could you improve localization under the noisier scenarios? 
+
 The most obvious pattern in the accelerometer data is how quickly the position calculation drifts away from reality. Because the data is double-integrated, even a microscopic constant error in the acceleration reading becomes a growing error in velocity, which then becomes a massive, curving error in position over time.
 Because velocity error compounds over time, we need a way to reset it. We could upgrade our code to detect when a step is finished and the device is momentarily still (using our deadband threshold). The moment the device registers as "still," the software should forcefully reset the calculated velocity back to exactly zero. This breaks the snowball effect of integration drift.
 ### Self-Assessment 
