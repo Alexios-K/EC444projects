@@ -1,2 +1,2 @@
 version,device name,recording epoch time,recording time,recording timezone,platform,appVersion,device id,sensors,sampleRateMs,standardisation,platform version
-3,SM-S906U1,1772752772845,2026-03-05_23-19-32,America/New_York,android,1.54.1,bacd3b10-71c0-4730-bbe9-8e332f2efd92,Accelerometer|Annotation|TotalAcceleration|AccelerometerUncalibrated,10||10|10,false,36
+3,SM-S906U1,1772755053481,2026-03-05_23-57-33,America/New_York,android,1.54.1,bacd3b10-71c0-4730-bbe9-8e332f2efd92,Accelerometer|Orientation|Annotation|TotalAcceleration|AccelerometerUncalibrated,10|10||10|10,false,36
