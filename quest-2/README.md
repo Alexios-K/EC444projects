@@ -18,7 +18,7 @@ appropriate.
 <img src="./images/IMG_7285.jpg" width="50%">
 </p>
 <p align="center">
-Template for Including Graphics
+Lidarv4 and Accelerometer wired together to ESP32 same SCL and SDA pin
 </p>
 
 ### Quest Summary
