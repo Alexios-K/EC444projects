@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -26,20 +25,21 @@
 #define portTICK_PERIOD_MS portTICK_RATE_MS
 #endif
 
-
 #define LIDAR_ADDR                  0x62
-
 #define ACCEL_ADDR                  ADXL343_ADDRESS
 
-//Double integration for accelerometer  
-static float vel_x = 0, vel_y = 0, vel_z = 0;
-static float pos_x = 0, pos_y = 0, pos_z = 0;
+// Accelerometer Filtering and Integration Constants
+#define LPF_ALPHA 0.2f       // Low-pass filter smoothing factor (Lower = smoother, but more lag)
 #define ACCEL_BIAS_X  0.0f
 #define ACCEL_BIAS_Y  0.0f
 #define ACCEL_BIAS_Z  9.81f  // subtract gravity from Z at rest
-#define ACCEL_THRESHOLD 0.1f
+#define ACCEL_THRESHOLD 0.1f // Deadband threshold
 
+// Double integration variables for accelerometer  
+static float vel_x = 0, vel_y = 0, vel_z = 0;
+static float pos_x = 0, pos_y = 0, pos_z = 0;
 
+// ADC / Ultrasonic
 #define DEFAULT_VREF                1100
 #define NO_OF_SAMPLES               64
 static const adc_channel_t  adc_channel = ADC_CHANNEL_6;   // GPIO34
@@ -47,7 +47,7 @@ static const adc_atten_t    adc_atten   = ADC_ATTEN_DB_12;
 static const adc_unit_t     adc_unit    = ADC_UNIT_1;
 static esp_adc_cal_characteristics_t *adc_chars;
 
-//I2C stuff
+// --- I2C Helper Functions ---
 static void i2c_master_init(void) {
     printf("\n>> I2C Config\n");
     i2c_config_t conf = {
@@ -125,9 +125,7 @@ static void i2c_scanner(void) {
     if (count == 0) { printf("- No I2C devices found!\n"); }
 }
 
-
-
-//Lidar 
+// --- LiDAR Functions ---
 static int16_t lidar_read_distance(void) {
     uint8_t low  = i2c_read_reg(LIDAR_ADDR, 0x10);
     uint8_t high = i2c_read_reg(LIDAR_ADDR, 0x11);
@@ -163,7 +161,7 @@ static void lidar_task(void *pvParameters) {
     }
 }
 
-//Accelerometer
+// --- Accelerometer Functions ---
 static void accel_set_range(range_t range) {
     uint8_t format = i2c_read_reg(ACCEL_ADDR, ADXL343_REG_DATA_FORMAT);
     format &= ~0x0F;
@@ -194,36 +192,53 @@ static void accel_calc_roll_pitch(float x, float y, float z) {
 
 static void accel_task(void *pvParameters) {
     printf("Accelerometer Task Started\n");
-    const float dt = 0.5f;
+    const float dt = 0.5f; // Timestep matches the vTaskDelay
+   
+    // Static variables to hold previous state for the temporal (low-pass) filter
+    static float filt_ax = 0.0f, filt_ay = 0.0f, filt_az = 0.0f;
+
     while (1) {
         float ax, ay, az;
         accel_get_values(&ax, &ay, &az);
 
-        // Remove bias FIRST, before threshold
-        ax -= 0.04f;   // your measured resting X
-        ay -= -0.04f;  // your measured resting Y
-        az -= 9.18f;   // your measured resting Z (removes gravity)
+        // 1. Bias Removal (Center raw data around 0 first)
+        ax -= 0.04f;   // measured resting X
+        ay -= -0.04f;  // measured resting Y
+        az -= 9.18f;   // measured resting Z (removes gravity)
 
-        // Now threshold filters only residual noise
-        if (fabs(ax) < ACCEL_THRESHOLD) ax = 0;
-        if (fabs(ay) < ACCEL_THRESHOLD) ay = 0;
-        if (fabs(az) < ACCEL_THRESHOLD) az = 0;
+        // 2. Temporal Filter (Low-Pass EMA Filter)
+        filt_ax = (LPF_ALPHA * ax) + ((1.0f - LPF_ALPHA) * filt_ax);
+        filt_ay = (LPF_ALPHA * ay) + ((1.0f - LPF_ALPHA) * filt_ay);
+        filt_az = (LPF_ALPHA * az) + ((1.0f - LPF_ALPHA) * filt_az);
 
-        vel_x += ax * dt;
-        vel_y += ay * dt;
-        vel_z += az * dt;
+        // Create temporary variables for thresholding so we don't mess up filter history
+        float final_ax = filt_ax;
+        float final_ay = filt_ay;
+        float final_az = filt_az;
 
+        // 3. Threshold Filter (Deadband)
+        if (fabs(final_ax) < ACCEL_THRESHOLD) final_ax = 0.0f;
+        if (fabs(final_ay) < ACCEL_THRESHOLD) final_ay = 0.0f;
+        if (fabs(final_az) < ACCEL_THRESHOLD) final_az = 0.0f;
+
+        // 4. Double Integration
+        // First Integration: Acceleration to Velocity
+        vel_x += final_ax * dt;
+        vel_y += final_ay * dt;
+        vel_z += final_az * dt;
+
+        // Second Integration: Velocity to Position
         pos_x += vel_x * dt;
         pos_y += vel_y * dt;
         pos_z += vel_z * dt;
 
-        printf("[ACCEL] Pos(m): X=%.2f Y=%.2f Z=%.2f\n", pos_x, pos_y, pos_z);
+        printf("[ACCEL] Y Pos(m): %.2f \n", pos_y);
+       
         vTaskDelay(pdMS_TO_TICKS((int)(dt * 1000)));
     }
 }
 
-
-//Ultrasonic
+// --- Ultrasonic Functions ---
 static void adc_init(void) {
     // Check eFuse calibration support
     if (esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_TP) == ESP_OK) {
@@ -276,9 +291,7 @@ static void ultrasonic_task(void *pvParameters) {
     }
 }
 
-
-
-//Main function
+// --- Main Function ---
 void app_main(void) {
 
     // --- Shared I2C bus init ---
@@ -307,5 +320,5 @@ void app_main(void) {
     // --- Launch sensor tasks ---
     xTaskCreate(lidar_task,       "lidar_task",   4096, NULL, 5, NULL);
     xTaskCreate(accel_task,       "accel_task",   4096, NULL, 5, NULL);
-    xTaskCreate(ultrasonic_task,  "sonic_task",   4096, NULL, 5, NULL);
+    //xTaskCreate(ultrasonic_task,  "sonic_task",   4096, NULL, 5, NULL);
 }
