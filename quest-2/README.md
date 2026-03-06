@@ -15,7 +15,7 @@ diagrams, show data flow, include control flow or state charts if
 appropriate.
 
 <p align="center">
-<img src="./images/ece444.png" width="50%">
+<img src="./images/IMG_7285.jpg" width="50%">
 </p>
 <p align="center">
 Template for Including Graphics
