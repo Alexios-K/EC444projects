@@ -37,7 +37,7 @@ have done differently.
 
 
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
+- [Link to video technical presentation](https://drive.google.com/file/d/1Sb5JZk0VGkZXkLzrK1tL9n-CvFOncmXX/view?usp=sharing). Not to exceed 120s
 - [Link to video demo](https://drive.google.com/file/d/1nhvY1g3gkUNpFocvj2V990glKWTwxV2_/view?usp=drive_link).
 
 ## Investigative question: Do you observe any patterns in the noise? How could you improve localization under the noisier scenarios? 
