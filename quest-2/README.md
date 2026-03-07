@@ -31,6 +31,13 @@ Finally, the ESP32 takes the measured distance from the LiDAR and the calculated
 Lidarv4 and Accelerometer wired together to ESP32 same SCL and SDA pin
 </p>
 
+<p align="center">
+<img src="./images/Screenshot 2026-03-06 220445.png" width="50%">
+</p>
+<p align="center">
+Graph of Accelerometer position and Lidar distance measurement
+</p>
+
 ### Quest Summary
 Summarize your results and call out any challenges or things you would
 have done differently.
