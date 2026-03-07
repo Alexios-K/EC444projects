@@ -8,6 +8,7 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 #include "./ADXL343.h"
+#include "esp_timer.h"
 
 /*I2C*/
 #define I2C_MASTER_SCL_IO           22
@@ -192,12 +193,19 @@ static void accel_calc_roll_pitch(float x, float y, float z) {
 
 static void accel_task(void *pvParameters) {
     printf("Accelerometer Task Started\n");
-    const float dt = 0.5f; // Timestep matches the vTaskDelay
+    
+    // Initialize timer for accurate dt calculation
+    int64_t last_time = esp_timer_get_time();
    
     // Static variables to hold previous state for the temporal (low-pass) filter
     static float filt_ax = 0.0f, filt_ay = 0.0f, filt_az = 0.0f;
 
     while (1) {
+        // Calculate actual dt (in seconds) to account for I2C delays/jitter
+        int64_t current_time = esp_timer_get_time();
+        float dt = (float)(current_time - last_time) / 1000000.0f;
+        last_time = current_time;
+
         float ax, ay, az;
         accel_get_values(&ax, &ay, &az);
 
@@ -221,20 +229,20 @@ static void accel_task(void *pvParameters) {
         if (fabs(final_ay) < ACCEL_THRESHOLD) final_ay = 0.0f;
         if (fabs(final_az) < ACCEL_THRESHOLD) final_az = 0.0f;
 
-        // 4. Double Integration
-        // First Integration: Acceleration to Velocity
+        // 4. Double Integration (Kinematic Equation: x = x0 + v0*t + 0.5*a*t^2)
+        // Update Position first using previous velocity (v0)
+        pos_x += (vel_x * dt) + (0.5f * final_ax * dt * dt);
+        pos_y += (vel_y * dt) + (0.5f * final_ay * dt * dt);
+        pos_z += (vel_z * dt) + (0.5f * final_az * dt * dt);
+
+        // Update Velocity (v = v0 + a*t)
         vel_x += final_ax * dt;
         vel_y += final_ay * dt;
         vel_z += final_az * dt;
 
-        // Second Integration: Velocity to Position
-        pos_x += vel_x * dt;
-        pos_y += vel_y * dt;
-        pos_z += vel_z * dt;
-
         printf("[ACCEL] Y Pos(m): %.2f \n", pos_y);
        
-        vTaskDelay(pdMS_TO_TICKS((int)(dt * 1000)));
+        vTaskDelay(pdMS_TO_TICKS(10)); // Target ~100Hz sample rate
     }
 }
 
