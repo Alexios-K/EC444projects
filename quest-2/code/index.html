@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 Live Graph</title>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="accelChartContainer" style="height: 300px; width: 100%;"></div>
+    <div id="orientChartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+        const socket = io();
+        
+        // Acceleration Chart Setup
+        let xPoints = [], yPoints = [], zPoints = [];
+        const accelChart = new CanvasJS.Chart("accelChartContainer", {
+            title: { text: "Acceleration (X, Y, Z)" },
+            data: [
+                { type: "line", name: "X", showInLegend: true, xValueType: "dateTime", dataPoints: xPoints },
+                { type: "line", name: "Y", showInLegend: true, xValueType: "dateTime", dataPoints: yPoints },
+                { type: "line", name: "Z", showInLegend: true, xValueType: "dateTime", dataPoints: zPoints }
+            ]
+        });
+
+        // Orientation Chart Setup
+        let rollPoints = [], pitchPoints = [];
+        const orientChart = new CanvasJS.Chart("orientChartContainer", {
+            title: { text: "Orientation (Roll, Pitch)" },
+            data: [
+                { type: "line", name: "Roll", showInLegend: true, xValueType: "dateTime", dataPoints: rollPoints },
+                { type: "line", name: "Pitch", showInLegend: true, xValueType: "dateTime", dataPoints: pitchPoints }
+            ]
+        });
+
+        socket.on('accelData', (data) => {
+            xPoints.push({ x: data.time, y: data.x });
+            yPoints.push({ x: data.time, y: data.y });
+            zPoints.push({ x: data.time, y: data.z });
+            
+            if (xPoints.length > 20) { xPoints.shift(); yPoints.shift(); zPoints.shift(); }
+            accelChart.render();
+        });
+
+        socket.on('orientationData', (data) => {
+            rollPoints.push({ x: data.time, y: data.roll });
+            pitchPoints.push({ x: data.time, y: data.pitch });
+            
+            if (rollPoints.length > 20) { rollPoints.shift(); pitchPoints.shift(); }
+            orientChart.render();
+        });
+    </script>
+</body>
+</html>
