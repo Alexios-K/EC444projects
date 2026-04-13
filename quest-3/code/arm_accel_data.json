@@ -2,966 +2,1159 @@
   {
     "timestamp": "2026-04-11T18:15:33.787Z",
     "source": "accelerometer",
-    "data": "X: -3.84 \t Y: -8.43 \t Z: 4.28\nroll: -63.12 \t pitch: 22.12 \n"
+    "data": "X: -3.84 \t Y: -8.43 \t Z: 4.28\nroll: -63.12 \t pitch: 22.12 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:34.286Z",
     "source": "accelerometer",
-    "data": "X: -3.45 \t Y: -7.53 \t Z: 5.88\nroll: -52.00 \t pitch: 19.86 \n"
+    "data": "X: -3.45 \t Y: -7.53 \t Z: 5.88\nroll: -52.00 \t pitch: 19.86 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:34.785Z",
     "source": "accelerometer",
-    "data": "X: -5.33 \t Y: -5.88 \t Z: 4.98\nroll: -49.75 \t pitch: 34.68 \n"
+    "data": "X: -5.33 \t Y: -5.88 \t Z: 4.98\nroll: -49.75 \t pitch: 34.68 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:35.284Z",
     "source": "accelerometer",
-    "data": "X: -6.90 \t Y: -8.63 \t Z: 6.08\nroll: -54.83 \t pitch: 33.18 \n"
+    "data": "X: -6.90 \t Y: -8.63 \t Z: 6.08\nroll: -54.83 \t pitch: 33.18 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:35.784Z",
     "source": "accelerometer",
-    "data": "X: -0.94 \t Y: -5.18 \t Z: 6.35\nroll: -39.17 \t pitch: 6.55 \n"
+    "data": "X: -0.94 \t Y: -5.18 \t Z: 6.35\nroll: -39.17 \t pitch: 6.55 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:36.284Z",
     "source": "accelerometer",
-    "data": "X: 1.14 \t Y: -1.96 \t Z: 5.18\nroll: -20.75 \t pitch: -11.61 \n"
+    "data": "X: 1.14 \t Y: -1.96 \t Z: 5.18\nroll: -20.75 \t pitch: -11.61 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:36.797Z",
     "source": "accelerometer",
-    "data": "X: -1.92 \t Y: -5.18 \t Z: 10.98\nroll: -25.24 \t pitch: 8.99 \n"
+    "data": "X: -1.92 \t Y: -5.18 \t Z: 10.98\nroll: -25.24 \t pitch: 8.99 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:37.300Z",
     "source": "accelerometer",
-    "data": "X: -2.94 \t Y: -4.43 \t Z: 12.55\nroll: -19.45 \t pitch: 12.46 \n"
+    "data": "X: -2.94 \t Y: -4.43 \t Z: 12.55\nroll: -19.45 \t pitch: 12.46 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:37.798Z",
     "source": "accelerometer",
-    "data": "X: 1.80 \t Y: -2.00 \t Z: 8.12\nroll: -13.84 \t pitch: -12.18 \n"
+    "data": "X: 1.80 \t Y: -2.00 \t Z: 8.12\nroll: -13.84 \t pitch: -12.18 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:38.293Z",
     "source": "accelerometer",
-    "data": "X: -0.98 \t Y: -5.06 \t Z: 8.43\nroll: -30.96 \t pitch: 5.69 \n"
+    "data": "X: -0.98 \t Y: -5.06 \t Z: 8.43\nroll: -30.96 \t pitch: 5.69 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:38.792Z",
     "source": "accelerometer",
-    "data": "X: -6.00 \t Y: -5.81 \t Z: 9.34\nroll: -31.88 \t pitch: 28.63 \n"
+    "data": "X: -6.00 \t Y: -5.81 \t Z: 9.34\nroll: -31.88 \t pitch: 28.63 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:39.291Z",
     "source": "accelerometer",
-    "data": "X: -7.37 \t Y: -4.00 \t Z: 4.24\nroll: -43.36 \t pitch: 51.69 \n"
+    "data": "X: -7.37 \t Y: -4.00 \t Z: 4.24\nroll: -43.36 \t pitch: 51.69 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:39.796Z",
     "source": "accelerometer",
-    "data": "X: -6.83 \t Y: -5.18 \t Z: 5.22\nroll: -44.78 \t pitch: 42.88 \n"
+    "data": "X: -6.83 \t Y: -5.18 \t Z: 5.22\nroll: -44.78 \t pitch: 42.88 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:40.293Z",
     "source": "accelerometer",
-    "data": "X: -6.98 \t Y: -5.10 \t Z: 4.71\nroll: -47.29 \t pitch: 45.17 \n"
+    "data": "X: -6.98 \t Y: -5.10 \t Z: 4.71\nroll: -47.29 \t pitch: 45.17 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:40.795Z",
     "source": "accelerometer",
-    "data": "X: -6.86 \t Y: -5.14 \t Z: 4.98\nroll: -45.89 \t pitch: 43.81 \n"
+    "data": "X: -6.86 \t Y: -5.14 \t Z: 4.98\nroll: -45.89 \t pitch: 43.81 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:41.309Z",
     "source": "accelerometer",
-    "data": "X: -6.86 \t Y: -5.14 \t Z: 5.02\nroll: -45.66 \t pitch: 43.70 \n"
+    "data": "X: -6.86 \t Y: -5.14 \t Z: 5.02\nroll: -45.66 \t pitch: 43.70 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:41.806Z",
     "source": "accelerometer",
-    "data": "X: -6.90 \t Y: -5.14 \t Z: 4.94\nroll: -46.11 \t pitch: 44.08 \n"
+    "data": "X: -6.90 \t Y: -5.14 \t Z: 4.94\nroll: -46.11 \t pitch: 44.08 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:42.316Z",
     "source": "accelerometer",
-    "data": "X: -6.98 \t Y: -5.02 \t Z: 4.86\nroll: -45.91 \t pitch: 44.97 \n"
+    "data": "X: -6.98 \t Y: -5.02 \t Z: 4.86\nroll: -45.91 \t pitch: 44.97 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:42.806Z",
     "source": "accelerometer",
-    "data": "X: -6.86 \t Y: -4.94 \t Z: 4.98\nroll: -44.77 \t pitch: 44.37 \n"
+    "data": "X: -6.86 \t Y: -4.94 \t Z: 4.98\nroll: -44.77 \t pitch: 44.37 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:43.303Z",
     "source": "accelerometer",
-    "data": "X: -6.86 \t Y: -4.98 \t Z: 4.98\nroll: -45.00 \t pitch: 44.26 \n"
+    "data": "X: -6.86 \t Y: -4.98 \t Z: 4.98\nroll: -45.00 \t pitch: 44.26 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:43.803Z",
     "source": "accelerometer",
-    "data": "X: -6.90 \t Y: -5.02 \t Z: 5.02\nroll: -45.00 \t pitch: 44.19 \n"
+    "data": "X: -6.90 \t Y: -5.02 \t Z: 5.02\nroll: -45.00 \t pitch: 44.19 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:44.303Z",
     "source": "accelerometer",
-    "data": "X: -6.79 \t Y: -5.02 \t Z: 4.94\nroll: -45.45 \t pitch: 43.93 \n"
+    "data": "X: -6.79 \t Y: -5.02 \t Z: 4.94\nroll: -45.45 \t pitch: 43.93 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:44.804Z",
     "source": "accelerometer",
-    "data": "X: -6.75 \t Y: -5.26 \t Z: 5.10\nroll: -45.87 \t pitch: 42.65 \n"
+    "data": "X: -6.75 \t Y: -5.26 \t Z: 5.10\nroll: -45.87 \t pitch: 42.65 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:45.305Z",
     "source": "accelerometer",
-    "data": "X: -6.75 \t Y: -4.94 \t Z: 4.98\nroll: -44.77 \t pitch: 43.87 \n"
+    "data": "X: -6.75 \t Y: -4.94 \t Z: 4.98\nroll: -44.77 \t pitch: 43.87 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:45.817Z",
     "source": "accelerometer",
-    "data": "X: -6.51 \t Y: -4.98 \t Z: 4.82\nroll: -45.92 \t pitch: 43.20 \n"
+    "data": "X: -6.51 \t Y: -4.98 \t Z: 4.82\nroll: -45.92 \t pitch: 43.20 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:46.323Z",
     "source": "accelerometer",
-    "data": "X: -6.47 \t Y: -3.57 \t Z: 3.69\nroll: -44.07 \t pitch: 51.59 \n"
+    "data": "X: -6.47 \t Y: -3.57 \t Z: 3.69\nroll: -44.07 \t pitch: 51.59 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:15:46.837Z",
     "source": "accelerometer",
-    "data": "X: -8.59 \t Y: -8.28 \t Z: 7.65\nroll: -47.26 \t pitch: 37.32 \n"
+    "data": "X: -8.59 \t Y: -8.28 \t Z: 7.65\nroll: -47.26 \t pitch: 37.32 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:47.358Z",
     "source": "accelerometer",
-    "data": "X: -5.65 \t Y: -5.22 \t Z: 3.53\nroll: -55.91 \t pitch: 41.88 \n"
+    "data": "X: -5.65 \t Y: -5.22 \t Z: 3.53\nroll: -55.91 \t pitch: 41.88 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:47.844Z",
     "source": "accelerometer",
-    "data": "X: -9.14 \t Y: -4.24 \t Z: 4.35\nroll: -44.22 \t pitch: 56.39 \n"
+    "data": "X: -9.14 \t Y: -4.24 \t Z: 4.35\nroll: -44.22 \t pitch: 56.39 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:48.357Z",
     "source": "accelerometer",
-    "data": "X: -6.43 \t Y: -5.37 \t Z: 9.22\nroll: -30.24 \t pitch: 31.09 \n"
+    "data": "X: -6.43 \t Y: -5.37 \t Z: 9.22\nroll: -30.24 \t pitch: 31.09 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:48.843Z",
     "source": "accelerometer",
-    "data": "X: 1.84 \t Y: -0.71 \t Z: 7.57\nroll: -5.33 \t pitch: -13.63 \n"
+    "data": "X: 1.84 \t Y: -0.71 \t Z: 7.57\nroll: -5.33 \t pitch: -13.63 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:49.344Z",
     "source": "accelerometer",
-    "data": "X: 1.14 \t Y: 0.08 \t Z: 7.65\nroll: 0.59 \t pitch: -8.46 \n"
+    "data": "X: 1.14 \t Y: 0.08 \t Z: 7.65\nroll: 0.59 \t pitch: -8.46 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:49.902Z",
     "source": "accelerometer",
-    "data": "X: -9.06 \t Y: -4.75 \t Z: 8.20\nroll: -30.07 \t pitch: 43.73 \n"
+    "data": "X: -9.06 \t Y: -4.75 \t Z: 8.20\nroll: -30.07 \t pitch: 43.73 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:50.343Z",
     "source": "accelerometer",
-    "data": "X: -8.00 \t Y: -4.63 \t Z: 4.08\nroll: -48.61 \t pitch: 52.37 \n"
+    "data": "X: -8.00 \t Y: -4.63 \t Z: 4.08\nroll: -48.61 \t pitch: 52.37 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:50.842Z",
     "source": "accelerometer",
-    "data": "X: -7.96 \t Y: -4.75 \t Z: 4.24\nroll: -48.25 \t pitch: 51.38 \n"
+    "data": "X: -7.96 \t Y: -4.75 \t Z: 4.24\nroll: -48.25 \t pitch: 51.38 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:51.345Z",
     "source": "accelerometer",
-    "data": "X: -7.81 \t Y: -4.28 \t Z: 4.12\nroll: -46.07 \t pitch: 52.75 \n"
+    "data": "X: -7.81 \t Y: -4.28 \t Z: 4.12\nroll: -46.07 \t pitch: 52.75 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:51.848Z",
     "source": "accelerometer",
-    "data": "X: -7.77 \t Y: -4.12 \t Z: 4.12\nroll: -45.00 \t pitch: 53.13 \n"
+    "data": "X: -7.77 \t Y: -4.12 \t Z: 4.12\nroll: -45.00 \t pitch: 53.13 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:52.344Z",
     "source": "accelerometer",
-    "data": "X: -6.39 \t Y: -6.94 \t Z: 4.98\nroll: -54.34 \t pitch: 36.80 \n"
+    "data": "X: -6.39 \t Y: -6.94 \t Z: 4.98\nroll: -54.34 \t pitch: 36.80 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:52.855Z",
     "source": "accelerometer",
-    "data": "X: -7.30 \t Y: -5.06 \t Z: 6.16\nroll: -39.41 \t pitch: 42.47 \n"
+    "data": "X: -7.30 \t Y: -5.06 \t Z: 6.16\nroll: -39.41 \t pitch: 42.47 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:53.343Z",
     "source": "accelerometer",
-    "data": "X: -6.79 \t Y: -4.67 \t Z: 5.69\nroll: -39.38 \t pitch: 42.68 \n"
+    "data": "X: -6.79 \t Y: -4.67 \t Z: 5.69\nroll: -39.38 \t pitch: 42.68 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:53.848Z",
     "source": "accelerometer",
-    "data": "X: -8.67 \t Y: -3.57 \t Z: 4.08\nroll: -41.19 \t pitch: 57.98 \n"
+    "data": "X: -8.67 \t Y: -3.57 \t Z: 4.08\nroll: -41.19 \t pitch: 57.98 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:54.343Z",
     "source": "accelerometer",
-    "data": "X: -8.47 \t Y: -4.00 \t Z: 4.20\nroll: -43.63 \t pitch: 55.61 \n"
+    "data": "X: -8.47 \t Y: -4.00 \t Z: 4.20\nroll: -43.63 \t pitch: 55.61 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:54.843Z",
     "source": "accelerometer",
-    "data": "X: -8.83 \t Y: -2.55 \t Z: 0.16\nroll: -86.48 \t pitch: 73.86 \n"
+    "data": "X: -8.83 \t Y: -2.55 \t Z: 0.16\nroll: -86.48 \t pitch: 73.86 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:55.345Z",
     "source": "accelerometer",
-    "data": "X: -9.38 \t Y: -2.20 \t Z: -0.16\nroll: -94.09 \t pitch: 76.78 \n"
+    "data": "X: -9.38 \t Y: -2.20 \t Z: -0.16\nroll: -94.09 \t pitch: 76.78 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:55.847Z",
     "source": "accelerometer",
-    "data": "X: -8.98 \t Y: -4.12 \t Z: 0.47\nroll: -83.48 \t pitch: 65.23 \n"
+    "data": "X: -8.98 \t Y: -4.12 \t Z: 0.47\nroll: -83.48 \t pitch: 65.23 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:56.356Z",
     "source": "accelerometer",
-    "data": "X: -8.08 \t Y: -5.22 \t Z: 0.82\nroll: -81.03 \t pitch: 56.83 \n"
+    "data": "X: -8.08 \t Y: -5.22 \t Z: 0.82\nroll: -81.03 \t pitch: 56.83 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:56.871Z",
     "source": "accelerometer",
-    "data": "X: -7.61 \t Y: -6.51 \t Z: 0.75\nroll: -83.47 \t pitch: 49.26 \n"
+    "data": "X: -7.61 \t Y: -6.51 \t Z: 0.75\nroll: -83.47 \t pitch: 49.26 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:57.364Z",
     "source": "accelerometer",
-    "data": "X: -8.00 \t Y: -5.18 \t Z: -0.04\nroll: -90.43 \t pitch: 57.09 \n"
+    "data": "X: -8.00 \t Y: -5.18 \t Z: -0.04\nroll: -90.43 \t pitch: 57.09 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:57.873Z",
     "source": "accelerometer",
-    "data": "X: -8.20 \t Y: -5.30 \t Z: 0.04\nroll: -89.58 \t pitch: 57.14 \n"
+    "data": "X: -8.20 \t Y: -5.30 \t Z: 0.04\nroll: -89.58 \t pitch: 57.14 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:58.365Z",
     "source": "accelerometer",
-    "data": "X: -8.12 \t Y: -5.65 \t Z: 0.08\nroll: -89.20 \t pitch: 55.17 \n"
+    "data": "X: -8.12 \t Y: -5.65 \t Z: 0.08\nroll: -89.20 \t pitch: 55.17 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:58.863Z",
     "source": "accelerometer",
-    "data": "X: -8.08 \t Y: -5.65 \t Z: -0.16\nroll: -91.59 \t pitch: 55.03 \n"
+    "data": "X: -8.08 \t Y: -5.65 \t Z: -0.16\nroll: -91.59 \t pitch: 55.03 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:59.363Z",
     "source": "accelerometer",
-    "data": "X: -8.32 \t Y: -5.69 \t Z: -0.16\nroll: -91.58 \t pitch: 55.62 \n"
+    "data": "X: -8.32 \t Y: -5.69 \t Z: -0.16\nroll: -91.58 \t pitch: 55.62 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:15:59.866Z",
     "source": "accelerometer",
-    "data": "X: -7.96 \t Y: -5.65 \t Z: -0.16\nroll: -91.59 \t pitch: 54.64 \n"
+    "data": "X: -7.96 \t Y: -5.65 \t Z: -0.16\nroll: -91.59 \t pitch: 54.64 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:00.365Z",
     "source": "accelerometer",
-    "data": "X: -7.92 \t Y: -5.26 \t Z: -0.27\nroll: -92.99 \t pitch: 56.41 \n"
+    "data": "X: -7.92 \t Y: -5.26 \t Z: -0.27\nroll: -92.99 \t pitch: 56.41 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:00.866Z",
     "source": "accelerometer",
-    "data": "X: -8.32 \t Y: -6.04 \t Z: -0.20\nroll: -91.86 \t pitch: 53.99 \n"
+    "data": "X: -8.32 \t Y: -6.04 \t Z: -0.20\nroll: -91.86 \t pitch: 53.99 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:01.375Z",
     "source": "accelerometer",
-    "data": "X: -8.16 \t Y: -5.69 \t Z: -0.55\nroll: -95.51 \t pitch: 54.99 \n"
+    "data": "X: -8.16 \t Y: -5.69 \t Z: -0.55\nroll: -95.51 \t pitch: 54.99 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:01.889Z",
     "source": "accelerometer",
-    "data": "X: -7.61 \t Y: -5.73 \t Z: -0.82\nroll: -98.19 \t pitch: 52.75 \n"
+    "data": "X: -7.61 \t Y: -5.73 \t Z: -0.82\nroll: -98.19 \t pitch: 52.75 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:02.400Z",
     "source": "accelerometer",
-    "data": "X: -8.00 \t Y: -5.49 \t Z: -0.71\nroll: -97.33 \t pitch: 55.32 \n"
+    "data": "X: -8.00 \t Y: -5.49 \t Z: -0.71\nroll: -97.33 \t pitch: 55.32 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:02.894Z",
     "source": "accelerometer",
-    "data": "X: -8.04 \t Y: -5.57 \t Z: -0.71\nroll: -97.22 \t pitch: 55.08 \n"
+    "data": "X: -8.04 \t Y: -5.57 \t Z: -0.71\nroll: -97.22 \t pitch: 55.08 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:03.407Z",
     "source": "accelerometer",
-    "data": "X: -8.08 \t Y: -5.65 \t Z: -0.31\nroll: -93.18 \t pitch: 55.00 \n"
+    "data": "X: -8.08 \t Y: -5.65 \t Z: -0.31\nroll: -93.18 \t pitch: 55.00 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:03.911Z",
     "source": "accelerometer",
-    "data": "X: -8.20 \t Y: -5.30 \t Z: -0.35\nroll: -93.81 \t pitch: 57.08 \n"
+    "data": "X: -8.20 \t Y: -5.30 \t Z: -0.35\nroll: -93.81 \t pitch: 57.08 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:04.395Z",
     "source": "accelerometer",
-    "data": "X: -8.20 \t Y: -5.18 \t Z: -0.16\nroll: -91.74 \t pitch: 57.71 \n"
+    "data": "X: -8.20 \t Y: -5.18 \t Z: -0.16\nroll: -91.74 \t pitch: 57.71 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:04.894Z",
     "source": "accelerometer",
-    "data": "X: -8.08 \t Y: -5.14 \t Z: 0.12\nroll: -88.69 \t pitch: 57.54 \n"
+    "data": "X: -8.08 \t Y: -5.14 \t Z: 0.12\nroll: -88.69 \t pitch: 57.54 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:05.396Z",
     "source": "accelerometer",
-    "data": "X: -8.79 \t Y: -6.35 \t Z: 1.14\nroll: -79.85 \t pitch: 53.69 \n"
+    "data": "X: -8.79 \t Y: -6.35 \t Z: 1.14\nroll: -79.85 \t pitch: 53.69 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:05.892Z",
     "source": "accelerometer",
-    "data": "X: -6.94 \t Y: -4.47 \t Z: -2.24\nroll: -116.57 \t pitch: 54.24 \n"
+    "data": "X: -6.94 \t Y: -4.47 \t Z: -2.24\nroll: -116.57 \t pitch: 54.24 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:06.444Z",
     "source": "accelerometer",
-    "data": "X: -6.75 \t Y: -6.43 \t Z: -1.41\nroll: -102.38 \t pitch: 45.69 \n"
+    "data": "X: -6.75 \t Y: -6.43 \t Z: -1.41\nroll: -102.38 \t pitch: 45.69 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:06.893Z",
     "source": "accelerometer",
-    "data": "X: -7.41 \t Y: -6.59 \t Z: -1.33\nroll: -101.44 \t pitch: 47.79 \n"
+    "data": "X: -7.41 \t Y: -6.59 \t Z: -1.33\nroll: -101.44 \t pitch: 47.79 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:07.395Z",
     "source": "accelerometer",
-    "data": "X: -7.30 \t Y: -6.39 \t Z: -1.37\nroll: -102.12 \t pitch: 48.13 \n"
+    "data": "X: -7.30 \t Y: -6.39 \t Z: -1.37\nroll: -102.12 \t pitch: 48.13 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:07.899Z",
     "source": "accelerometer",
-    "data": "X: -7.65 \t Y: -5.77 \t Z: -0.75\nroll: -97.36 \t pitch: 52.76 \n"
+    "data": "X: -7.65 \t Y: -5.77 \t Z: -0.75\nroll: -97.36 \t pitch: 52.76 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:08.395Z",
     "source": "accelerometer",
-    "data": "X: -7.53 \t Y: -6.55 \t Z: -0.16\nroll: -91.37 \t pitch: 48.98 \n"
+    "data": "X: -7.53 \t Y: -6.55 \t Z: -0.16\nroll: -91.37 \t pitch: 48.98 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:08.898Z",
     "source": "accelerometer",
-    "data": "X: -7.61 \t Y: -6.47 \t Z: -0.27\nroll: -92.43 \t pitch: 49.59 \n"
+    "data": "X: -7.61 \t Y: -6.47 \t Z: -0.27\nroll: -92.43 \t pitch: 49.59 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:09.395Z",
     "source": "accelerometer",
-    "data": "X: -7.73 \t Y: -5.69 \t Z: 0.12\nroll: -88.81 \t pitch: 53.64 \n"
+    "data": "X: -7.73 \t Y: -5.69 \t Z: 0.12\nroll: -88.81 \t pitch: 53.64 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:09.893Z",
     "source": "accelerometer",
-    "data": "X: -7.57 \t Y: -6.24 \t Z: -0.39\nroll: -93.60 \t pitch: 50.46 \n"
+    "data": "X: -7.57 \t Y: -6.24 \t Z: -0.39\nroll: -93.60 \t pitch: 50.46 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:10.393Z",
     "source": "accelerometer",
-    "data": "X: -7.81 \t Y: -6.16 \t Z: -0.35\nroll: -93.28 \t pitch: 51.68 \n"
+    "data": "X: -7.81 \t Y: -6.16 \t Z: -0.35\nroll: -93.28 \t pitch: 51.68 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:10.895Z",
     "source": "accelerometer",
-    "data": "X: -7.73 \t Y: -6.12 \t Z: -0.43\nroll: -94.03 \t pitch: 51.56 \n"
+    "data": "X: -7.73 \t Y: -6.12 \t Z: -0.43\nroll: -94.03 \t pitch: 51.56 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:11.394Z",
     "source": "accelerometer",
-    "data": "X: -7.69 \t Y: -5.84 \t Z: -0.51\nroll: -94.99 \t pitch: 52.65 \n"
+    "data": "X: -7.69 \t Y: -5.84 \t Z: -0.51\nroll: -94.99 \t pitch: 52.65 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:11.893Z",
     "source": "accelerometer",
-    "data": "X: -7.92 \t Y: -6.71 \t Z: -0.12\nroll: -91.01 \t pitch: 49.75 \n"
+    "data": "X: -7.92 \t Y: -6.71 \t Z: -0.12\nroll: -91.01 \t pitch: 49.75 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:12.401Z",
     "source": "accelerometer",
-    "data": "X: -7.49 \t Y: -6.71 \t Z: -0.39\nroll: -93.35 \t pitch: 48.11 \n"
+    "data": "X: -7.49 \t Y: -6.71 \t Z: -0.39\nroll: -93.35 \t pitch: 48.11 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:12.892Z",
     "source": "accelerometer",
-    "data": "X: -7.88 \t Y: -6.12 \t Z: 0.59\nroll: -84.51 \t pitch: 52.06 \n"
+    "data": "X: -7.88 \t Y: -6.12 \t Z: 0.59\nroll: -84.51 \t pitch: 52.06 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:13.393Z",
     "source": "accelerometer",
-    "data": "X: -9.22 \t Y: -8.71 \t Z: -0.35\nroll: -92.32 \t pitch: 46.61 \n"
+    "data": "X: -9.22 \t Y: -8.71 \t Z: -0.35\nroll: -92.32 \t pitch: 46.61 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:13.894Z",
     "source": "accelerometer",
-    "data": "X: -10.08 \t Y: -6.12 \t Z: 0.86\nroll: -81.97 \t pitch: 58.49 \n"
+    "data": "X: -10.08 \t Y: -6.12 \t Z: 0.86\nroll: -81.97 \t pitch: 58.49 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:14.399Z",
     "source": "accelerometer",
-    "data": "X: -8.87 \t Y: -7.69 \t Z: -0.98\nroll: -97.27 \t pitch: 48.84 \n"
+    "data": "X: -8.87 \t Y: -7.69 \t Z: -0.98\nroll: -97.27 \t pitch: 48.84 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:14.896Z",
     "source": "accelerometer",
-    "data": "X: -7.49 \t Y: -3.22 \t Z: 0.71\nroll: -77.62 \t pitch: 66.27 \n"
+    "data": "X: -7.49 \t Y: -3.22 \t Z: 0.71\nroll: -77.62 \t pitch: 66.27 \n",
+    "label": "walking"
   },
   {
     "timestamp": "2026-04-11T18:16:15.503Z",
     "source": "accelerometer",
-    "data": "X: -7.92 \t Y: -7.45 \t Z: 0.59\nroll: -85.49 \t pitch: 46.66 \n"
+    "data": "X: -7.92 \t Y: -7.45 \t Z: 0.59\nroll: -85.49 \t pitch: 46.66 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:16.015Z",
     "source": "accelerometer",
-    "data": "X: -12.00 \t Y: -6.28 \t Z: -0.82\nroll: -97.48 \t pitch: 62.19 \n"
+    "data": "X: -12.00 \t Y: -6.28 \t Z: -0.82\nroll: -97.48 \t pitch: 62.19 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:16.426Z",
     "source": "accelerometer",
-    "data": "X: -12.83 \t Y: -4.86 \t Z: 1.69\nroll: -70.87 \t pitch: 68.13 \n"
+    "data": "X: -12.83 \t Y: -4.86 \t Z: 1.69\nroll: -70.87 \t pitch: 68.13 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:16.937Z",
     "source": "accelerometer",
-    "data": "X: -9.41 \t Y: -9.81 \t Z: -1.84\nroll: -100.65 \t pitch: 43.33 \n"
+    "data": "X: -9.41 \t Y: -9.81 \t Z: -1.84\nroll: -100.65 \t pitch: 43.33 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:17.432Z",
     "source": "accelerometer",
-    "data": "X: -7.53 \t Y: -3.30 \t Z: -0.71\nroll: -102.09 \t pitch: 65.89 \n"
+    "data": "X: -7.53 \t Y: -3.30 \t Z: -0.71\nroll: -102.09 \t pitch: 65.89 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:18.165Z",
     "source": "accelerometer",
-    "data": "X: -7.69 \t Y: -5.41 \t Z: 0.55\nroll: -84.21 \t pitch: 54.71 \n"
+    "data": "X: -7.69 \t Y: -5.41 \t Z: 0.55\nroll: -84.21 \t pitch: 54.71 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:18.439Z",
     "source": "accelerometer",
-    "data": "X: -9.57 \t Y: -7.77 \t Z: -1.14\nroll: -98.33 \t pitch: 50.64 \n"
+    "data": "X: -9.57 \t Y: -7.77 \t Z: -1.14\nroll: -98.33 \t pitch: 50.64 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:18.925Z",
     "source": "accelerometer",
-    "data": "X: -9.65 \t Y: -7.57 \t Z: 1.49\nroll: -78.86 \t pitch: 51.35 \n"
+    "data": "X: -9.65 \t Y: -7.57 \t Z: 1.49\nroll: -78.86 \t pitch: 51.35 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:19.497Z",
     "source": "accelerometer",
-    "data": "X: -11.10 \t Y: -9.96 \t Z: -0.75\nroll: -94.28 \t pitch: 48.01 \n"
+    "data": "X: -11.10 \t Y: -9.96 \t Z: -0.75\nroll: -94.28 \t pitch: 48.01 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:19.923Z",
     "source": "accelerometer",
-    "data": "X: -6.79 \t Y: -2.59 \t Z: -0.04\nroll: -90.87 \t pitch: 69.12 \n"
+    "data": "X: -6.79 \t Y: -2.59 \t Z: -0.04\nroll: -90.87 \t pitch: 69.12 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:20.522Z",
     "source": "accelerometer",
-    "data": "X: -6.20 \t Y: -7.30 \t Z: -0.43\nroll: -93.38 \t pitch: 40.30 \n"
+    "data": "X: -6.20 \t Y: -7.30 \t Z: -0.43\nroll: -93.38 \t pitch: 40.30 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:20.932Z",
     "source": "accelerometer",
-    "data": "X: -8.94 \t Y: -6.55 \t Z: -0.08\nroll: -90.69 \t pitch: 53.78 \n"
+    "data": "X: -8.94 \t Y: -6.55 \t Z: -0.08\nroll: -90.69 \t pitch: 53.78 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:21.442Z",
     "source": "accelerometer",
-    "data": "X: -8.98 \t Y: -8.08 \t Z: -0.94\nroll: -96.65 \t pitch: 47.83 \n"
+    "data": "X: -8.98 \t Y: -8.08 \t Z: -0.94\nroll: -96.65 \t pitch: 47.83 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:21.926Z",
     "source": "accelerometer",
-    "data": "X: -6.24 \t Y: -7.69 \t Z: -1.10\nroll: -98.13 \t pitch: 38.77 \n"
+    "data": "X: -6.24 \t Y: -7.69 \t Z: -1.10\nroll: -98.13 \t pitch: 38.77 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:22.466Z",
     "source": "accelerometer",
-    "data": "X: -8.90 \t Y: -3.80 \t Z: -0.71\nroll: -100.51 \t pitch: 66.51 \n"
+    "data": "X: -8.90 \t Y: -3.80 \t Z: -0.71\nroll: -100.51 \t pitch: 66.51 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:22.924Z",
     "source": "accelerometer",
-    "data": "X: -6.59 \t Y: -7.65 \t Z: -1.33\nroll: -99.89 \t pitch: 40.32 \n"
+    "data": "X: -6.59 \t Y: -7.65 \t Z: -1.33\nroll: -99.89 \t pitch: 40.32 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:23.490Z",
     "source": "accelerometer",
-    "data": "X: -7.49 \t Y: -3.45 \t Z: -0.51\nroll: -98.40 \t pitch: 65.03 \n"
+    "data": "X: -7.49 \t Y: -3.45 \t Z: -0.51\nroll: -98.40 \t pitch: 65.03 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:23.923Z",
     "source": "accelerometer",
-    "data": "X: -7.26 \t Y: -5.92 \t Z: 2.04\nroll: -71.00 \t pitch: 49.20 \n"
+    "data": "X: -7.26 \t Y: -5.92 \t Z: 2.04\nroll: -71.00 \t pitch: 49.20 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:24.426Z",
     "source": "accelerometer",
-    "data": "X: -13.81 \t Y: -9.92 \t Z: -1.84\nroll: -100.52 \t pitch: 53.83 \n"
+    "data": "X: -13.81 \t Y: -9.92 \t Z: -1.84\nroll: -100.52 \t pitch: 53.83 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:25.027Z",
     "source": "accelerometer",
-    "data": "X: -16.08 \t Y: -4.94 \t Z: -0.04\nroll: -90.45 \t pitch: 72.92 \n"
+    "data": "X: -16.08 \t Y: -4.94 \t Z: -0.04\nroll: -90.45 \t pitch: 72.92 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:25.441Z",
     "source": "accelerometer",
-    "data": "X: -8.39 \t Y: -9.41 \t Z: -0.35\nroll: -92.15 \t pitch: 41.70 \n"
+    "data": "X: -8.39 \t Y: -9.41 \t Z: -0.35\nroll: -92.15 \t pitch: 41.70 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:25.935Z",
     "source": "accelerometer",
-    "data": "X: -6.04 \t Y: -1.92 \t Z: -0.04\nroll: -91.17 \t pitch: 72.35 \n"
+    "data": "X: -6.04 \t Y: -1.92 \t Z: -0.04\nroll: -91.17 \t pitch: 72.35 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:26.437Z",
     "source": "accelerometer",
-    "data": "X: -6.12 \t Y: -6.00 \t Z: -1.02\nroll: -99.64 \t pitch: 45.15 \n"
+    "data": "X: -6.12 \t Y: -6.00 \t Z: -1.02\nroll: -99.64 \t pitch: 45.15 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:26.937Z",
     "source": "accelerometer",
-    "data": "X: -12.79 \t Y: -7.34 \t Z: -0.86\nroll: -96.71 \t pitch: 59.99 \n"
+    "data": "X: -12.79 \t Y: -7.34 \t Z: -0.86\nroll: -96.71 \t pitch: 59.99 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:27.445Z",
     "source": "accelerometer",
-    "data": "X: -7.92 \t Y: -8.47 \t Z: -1.69\nroll: -101.26 \t pitch: 42.53 \n"
+    "data": "X: -7.92 \t Y: -8.47 \t Z: -1.69\nroll: -101.26 \t pitch: 42.53 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:27.941Z",
     "source": "accelerometer",
-    "data": "X: -13.45 \t Y: -7.85 \t Z: -0.75\nroll: -95.43 \t pitch: 59.64 \n"
+    "data": "X: -13.45 \t Y: -7.85 \t Z: -0.75\nroll: -95.43 \t pitch: 59.64 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:28.471Z",
     "source": "accelerometer",
-    "data": "X: -6.71 \t Y: -2.71 \t Z: 0.20\nroll: -85.86 \t pitch: 67.97 \n"
+    "data": "X: -6.71 \t Y: -2.71 \t Z: 0.20\nroll: -85.86 \t pitch: 67.97 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:28.934Z",
     "source": "accelerometer",
-    "data": "X: -7.30 \t Y: -8.16 \t Z: -1.06\nroll: -97.40 \t pitch: 41.57 \n"
+    "data": "X: -7.30 \t Y: -8.16 \t Z: -1.06\nroll: -97.40 \t pitch: 41.57 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:29.533Z",
     "source": "accelerometer",
-    "data": "X: -9.53 \t Y: -5.77 \t Z: 0.20\nroll: -88.05 \t pitch: 58.81 \n"
+    "data": "X: -9.53 \t Y: -5.77 \t Z: 0.20\nroll: -88.05 \t pitch: 58.81 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:29.947Z",
     "source": "accelerometer",
-    "data": "X: -12.12 \t Y: -7.81 \t Z: -1.88\nroll: -103.56 \t pitch: 56.48 \n"
+    "data": "X: -12.12 \t Y: -7.81 \t Z: -1.88\nroll: -103.56 \t pitch: 56.48 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:30.556Z",
     "source": "accelerometer",
-    "data": "X: -8.24 \t Y: -10.04 \t Z: -1.14\nroll: -96.46 \t pitch: 39.18 \n"
+    "data": "X: -8.24 \t Y: -10.04 \t Z: -1.14\nroll: -96.46 \t pitch: 39.18 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:31.068Z",
     "source": "accelerometer",
-    "data": "X: -6.16 \t Y: -2.59 \t Z: -0.47\nroll: -100.30 \t pitch: 66.86 \n"
+    "data": "X: -6.16 \t Y: -2.59 \t Z: -0.47\nroll: -100.30 \t pitch: 66.86 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:31.465Z",
     "source": "accelerometer",
-    "data": "X: -7.06 \t Y: -8.20 \t Z: -0.55\nroll: -93.83 \t pitch: 40.67 \n"
+    "data": "X: -7.06 \t Y: -8.20 \t Z: -0.55\nroll: -93.83 \t pitch: 40.67 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:31.990Z",
     "source": "accelerometer",
-    "data": "X: -9.38 \t Y: -32.36 \t Z: -2.98\nroll: -95.26 \t pitch: 16.09 \n"
+    "data": "X: -9.38 \t Y: -32.36 \t Z: -2.98\nroll: -95.26 \t pitch: 16.09 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:32.502Z",
     "source": "accelerometer",
-    "data": "X: 7.41 \t Y: -18.24 \t Z: -2.94\nroll: -99.16 \t pitch: -21.86 \n"
+    "data": "X: 7.41 \t Y: -18.24 \t Z: -2.94\nroll: -99.16 \t pitch: -21.86 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:32.972Z",
     "source": "accelerometer",
-    "data": "X: -3.96 \t Y: 2.24 \t Z: 0.27\nroll: 83.00 \t pitch: 60.38 \n"
+    "data": "X: -3.96 \t Y: 2.24 \t Z: 0.27\nroll: 83.00 \t pitch: 60.38 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:33.468Z",
     "source": "accelerometer",
-    "data": "X: 4.55 \t Y: 0.27 \t Z: -1.69\nroll: 170.75 \t pitch: -69.42 \n"
+    "data": "X: 4.55 \t Y: 0.27 \t Z: -1.69\nroll: 170.75 \t pitch: -69.42 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:33.967Z",
     "source": "accelerometer",
-    "data": "X: -5.02 \t Y: 2.51 \t Z: -3.69\nroll: 145.75 \t pitch: 48.38 \n"
+    "data": "X: -5.02 \t Y: 2.51 \t Z: -3.69\nroll: 145.75 \t pitch: 48.38 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:34.652Z",
     "source": "accelerometer",
-    "data": "X: 5.92 \t Y: -2.43 \t Z: 0.63\nroll: -75.53 \t pitch: -67.02 \n"
+    "data": "X: 5.92 \t Y: -2.43 \t Z: 0.63\nroll: -75.53 \t pitch: -67.02 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:34.969Z",
     "source": "accelerometer",
-    "data": "X: -2.12 \t Y: -42.40 \t Z: -4.47\nroll: -96.02 \t pitch: 2.84 \n"
+    "data": "X: -2.12 \t Y: -42.40 \t Z: -4.47\nroll: -96.02 \t pitch: 2.84 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:35.475Z",
     "source": "accelerometer",
-    "data": "X: 0.43 \t Y: -0.82 \t Z: -1.06\nroll: -142.13 \t pitch: -17.83 \n"
+    "data": "X: 0.43 \t Y: -0.82 \t Z: -1.06\nroll: -142.13 \t pitch: -17.83 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:35.984Z",
     "source": "accelerometer",
-    "data": "X: 4.90 \t Y: 0.04 \t Z: 1.18\nroll: 1.91 \t pitch: -76.50 \n"
+    "data": "X: 4.90 \t Y: 0.04 \t Z: 1.18\nroll: 1.91 \t pitch: -76.50 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:36.594Z",
     "source": "accelerometer",
-    "data": "X: -6.28 \t Y: 3.49 \t Z: -3.77\nroll: 137.17 \t pitch: 50.71 \n"
+    "data": "X: -6.28 \t Y: 3.49 \t Z: -3.77\nroll: 137.17 \t pitch: 50.71 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:36.993Z",
     "source": "accelerometer",
-    "data": "X: 3.26 \t Y: -9.89 \t Z: -6.67\nroll: -124.00 \t pitch: -15.27 \n"
+    "data": "X: 3.26 \t Y: -9.89 \t Z: -6.67\nroll: -124.00 \t pitch: -15.27 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:37.497Z",
     "source": "accelerometer",
-    "data": "X: 4.00 \t Y: -9.18 \t Z: 2.79\nroll: -73.12 \t pitch: -22.64 \n"
+    "data": "X: 4.00 \t Y: -9.18 \t Z: 2.79\nroll: -73.12 \t pitch: -22.64 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:37.992Z",
     "source": "accelerometer",
-    "data": "X: 10.71 \t Y: -18.51 \t Z: -4.00\nroll: -102.19 \t pitch: -29.48 \n"
+    "data": "X: 10.71 \t Y: -18.51 \t Z: -4.00\nroll: -102.19 \t pitch: -29.48 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:38.496Z",
     "source": "accelerometer",
-    "data": "X: 9.02 \t Y: -0.94 \t Z: -0.94\nroll: -135.00 \t pitch: -81.61 \n"
+    "data": "X: 9.02 \t Y: -0.94 \t Z: -0.94\nroll: -135.00 \t pitch: -81.61 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:39.008Z",
     "source": "accelerometer",
-    "data": "X: -6.98 \t Y: 0.08 \t Z: -2.04\nroll: 177.80 \t pitch: 73.70 \n"
+    "data": "X: -6.98 \t Y: 0.08 \t Z: -2.04\nroll: 177.80 \t pitch: 73.70 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:39.568Z",
     "source": "accelerometer",
-    "data": "X: 5.10 \t Y: -8.59 \t Z: -6.43\nroll: -126.83 \t pitch: -25.41 \n"
+    "data": "X: 5.10 \t Y: -8.59 \t Z: -6.43\nroll: -126.83 \t pitch: -25.41 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:40.079Z",
     "source": "accelerometer",
-    "data": "X: -16.32 \t Y: -32.71 \t Z: 6.90\nroll: -78.08 \t pitch: 26.01 \n"
+    "data": "X: -16.32 \t Y: -32.71 \t Z: 6.90\nroll: -78.08 \t pitch: 26.01 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:40.593Z",
     "source": "accelerometer",
-    "data": "X: -3.45 \t Y: -1.02 \t Z: -2.08\nroll: -153.87 \t pitch: 56.14 \n"
+    "data": "X: -3.45 \t Y: -1.02 \t Z: -2.08\nroll: -153.87 \t pitch: 56.14 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:41.000Z",
     "source": "accelerometer",
-    "data": "X: 9.92 \t Y: -2.90 \t Z: -2.63\nroll: -132.16 \t pitch: -68.47 \n"
+    "data": "X: 9.92 \t Y: -2.90 \t Z: -2.63\nroll: -132.16 \t pitch: -68.47 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:41.495Z",
     "source": "accelerometer",
-    "data": "X: -12.59 \t Y: -12.12 \t Z: -6.98\nroll: -119.94 \t pitch: 41.99 \n"
+    "data": "X: -12.59 \t Y: -12.12 \t Z: -6.98\nroll: -119.94 \t pitch: 41.99 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:41.996Z",
     "source": "accelerometer",
-    "data": "X: 21.57 \t Y: -60.33 \t Z: -1.41\nroll: -91.34 \t pitch: -19.67 \n"
+    "data": "X: 21.57 \t Y: -60.33 \t Z: -1.41\nroll: -91.34 \t pitch: -19.67 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:42.537Z",
     "source": "accelerometer",
-    "data": "X: 10.04 \t Y: -33.58 \t Z: -8.51\nroll: -104.23 \t pitch: -16.17 \n"
+    "data": "X: 10.04 \t Y: -33.58 \t Z: -8.51\nroll: -104.23 \t pitch: -16.17 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:43.000Z",
     "source": "accelerometer",
-    "data": "X: -2.20 \t Y: -2.00 \t Z: -1.26\nroll: -122.11 \t pitch: 42.93 \n"
+    "data": "X: -2.20 \t Y: -2.00 \t Z: -1.26\nroll: -122.11 \t pitch: 42.93 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:43.494Z",
     "source": "accelerometer",
-    "data": "X: 4.67 \t Y: -1.26 \t Z: -2.00\nroll: -147.89 \t pitch: -63.16 \n"
+    "data": "X: 4.67 \t Y: -1.26 \t Z: -2.00\nroll: -147.89 \t pitch: -63.16 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:44.000Z",
     "source": "accelerometer",
-    "data": "X: -4.20 \t Y: -1.77 \t Z: -2.98\nroll: -149.37 \t pitch: 50.46 \n"
+    "data": "X: -4.20 \t Y: -1.77 \t Z: -2.98\nroll: -149.37 \t pitch: 50.46 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:44.586Z",
     "source": "accelerometer",
-    "data": "X: 4.35 \t Y: -1.73 \t Z: -1.73\nroll: -135.00 \t pitch: -60.73 \n"
+    "data": "X: 4.35 \t Y: -1.73 \t Z: -1.73\nroll: -135.00 \t pitch: -60.73 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:45.001Z",
     "source": "accelerometer",
-    "data": "X: -3.26 \t Y: -16.95 \t Z: -8.47\nroll: -116.57 \t pitch: 9.75 \n"
+    "data": "X: -3.26 \t Y: -16.95 \t Z: -8.47\nroll: -116.57 \t pitch: 9.75 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:45.507Z",
     "source": "accelerometer",
-    "data": "X: 3.14 \t Y: -19.77 \t Z: 2.28\nroll: -83.44 \t pitch: -8.96 \n"
+    "data": "X: 3.14 \t Y: -19.77 \t Z: 2.28\nroll: -83.44 \t pitch: -8.96 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:46.002Z",
     "source": "accelerometer",
-    "data": "X: 7.85 \t Y: -4.04 \t Z: -7.18\nroll: -150.63 \t pitch: -43.60 \n"
+    "data": "X: 7.85 \t Y: -4.04 \t Z: -7.18\nroll: -150.63 \t pitch: -43.60 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:46.520Z",
     "source": "accelerometer",
-    "data": "X: -9.06 \t Y: 1.49 \t Z: -4.75\nroll: 162.57 \t pitch: 61.23 \n"
+    "data": "X: -9.06 \t Y: 1.49 \t Z: -4.75\nroll: 162.57 \t pitch: 61.23 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:47.004Z",
     "source": "accelerometer",
-    "data": "X: 4.00 \t Y: -48.92 \t Z: 7.57\nroll: -81.20 \t pitch: -4.62 \n"
+    "data": "X: 4.00 \t Y: -48.92 \t Z: 7.57\nroll: -81.20 \t pitch: -4.62 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:47.504Z",
     "source": "accelerometer",
-    "data": "X: 1.14 \t Y: -7.81 \t Z: 0.35\nroll: -87.41 \t pitch: -8.28 \n"
+    "data": "X: 1.14 \t Y: -7.81 \t Z: 0.35\nroll: -87.41 \t pitch: -8.28 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:48.016Z",
     "source": "accelerometer",
-    "data": "X: -13.34 \t Y: -1.49 \t Z: -2.63\nroll: -150.44 \t pitch: 77.24 \n"
+    "data": "X: -13.34 \t Y: -1.49 \t Z: -2.63\nroll: -150.44 \t pitch: 77.24 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:48.506Z",
     "source": "accelerometer",
-    "data": "X: 18.28 \t Y: -8.63 \t Z: 0.16\nroll: -88.96 \t pitch: -64.72 \n"
+    "data": "X: 18.28 \t Y: -8.63 \t Z: 0.16\nroll: -88.96 \t pitch: -64.72 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:49.003Z",
     "source": "accelerometer",
-    "data": "X: -8.71 \t Y: -41.93 \t Z: -2.79\nroll: -93.80 \t pitch: 11.71 \n"
+    "data": "X: -8.71 \t Y: -41.93 \t Z: -2.79\nroll: -93.80 \t pitch: 11.71 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:49.603Z",
     "source": "accelerometer",
-    "data": "X: -8.24 \t Y: -27.03 \t Z: -8.71\nroll: -107.86 \t pitch: 16.18 \n"
+    "data": "X: -8.24 \t Y: -27.03 \t Z: -8.71\nroll: -107.86 \t pitch: 16.18 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:50.115Z",
     "source": "accelerometer",
-    "data": "X: 4.98 \t Y: -21.06 \t Z: 6.67\nroll: -72.43 \t pitch: -12.71 \n"
+    "data": "X: 4.98 \t Y: -21.06 \t Z: 6.67\nroll: -72.43 \t pitch: -12.71 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:50.528Z",
     "source": "accelerometer",
-    "data": "X: -8.20 \t Y: 4.98 \t Z: -1.57\nroll: 107.48 \t pitch: 57.50 \n"
+    "data": "X: -8.20 \t Y: 4.98 \t Z: -1.57\nroll: 107.48 \t pitch: 57.50 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:51.043Z",
     "source": "accelerometer",
-    "data": "X: 4.43 \t Y: 2.39 \t Z: -4.28\nroll: 150.77 \t pitch: -42.13 \n"
+    "data": "X: 4.43 \t Y: 2.39 \t Z: -4.28\nroll: 150.77 \t pitch: -42.13 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:51.536Z",
     "source": "accelerometer",
-    "data": "X: -2.20 \t Y: -9.77 \t Z: -7.37\nroll: -127.05 \t pitch: 10.18 \n"
+    "data": "X: -2.20 \t Y: -9.77 \t Z: -7.37\nroll: -127.05 \t pitch: 10.18 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:52.061Z",
     "source": "accelerometer",
-    "data": "X: -3.53 \t Y: -39.34 \t Z: 3.37\nroll: -85.10 \t pitch: 5.11 \n"
+    "data": "X: -3.53 \t Y: -39.34 \t Z: 3.37\nroll: -85.10 \t pitch: 5.11 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:52.574Z",
     "source": "accelerometer",
-    "data": "X: 5.77 \t Y: -0.90 \t Z: 2.08\nroll: -23.46 \t pitch: -68.54 \n"
+    "data": "X: 5.77 \t Y: -0.90 \t Z: 2.08\nroll: -23.46 \t pitch: -68.54 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:53.037Z",
     "source": "accelerometer",
-    "data": "X: -3.18 \t Y: 2.51 \t Z: 1.53\nroll: 58.64 \t pitch: 47.22 \n"
+    "data": "X: -3.18 \t Y: 2.51 \t Z: 1.53\nroll: 58.64 \t pitch: 47.22 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:53.542Z",
     "source": "accelerometer",
-    "data": "X: 1.41 \t Y: -7.02 \t Z: -0.47\nroll: -93.84 \t pitch: -11.35 \n"
+    "data": "X: 1.41 \t Y: -7.02 \t Z: -0.47\nroll: -93.84 \t pitch: -11.35 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:54.036Z",
     "source": "accelerometer",
-    "data": "X: -4.51 \t Y: 4.43 \t Z: -0.27\nroll: 93.54 \t pitch: 45.45 \n"
+    "data": "X: -4.51 \t Y: 4.43 \t Z: -0.27\nroll: 93.54 \t pitch: 45.45 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:54.534Z",
     "source": "accelerometer",
-    "data": "X: 0.27 \t Y: -0.86 \t Z: 1.18\nroll: -36.25 \t pitch: -10.66 \n"
+    "data": "X: 0.27 \t Y: -0.86 \t Z: 1.18\nroll: -36.25 \t pitch: -10.66 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:55.037Z",
     "source": "accelerometer",
-    "data": "X: -2.24 \t Y: 2.55 \t Z: -3.53\nroll: 144.16 \t pitch: 27.18 \n"
+    "data": "X: -2.24 \t Y: 2.55 \t Z: -3.53\nroll: 144.16 \t pitch: 27.18 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:55.549Z",
     "source": "accelerometer",
-    "data": "X: -3.77 \t Y: -9.45 \t Z: -1.26\nroll: -97.56 \t pitch: 21.55 \n"
+    "data": "X: -3.77 \t Y: -9.45 \t Z: -1.26\nroll: -97.56 \t pitch: 21.55 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:56.053Z",
     "source": "accelerometer",
-    "data": "X: -8.12 \t Y: -6.12 \t Z: -0.47\nroll: -94.40 \t pitch: 52.92 \n"
+    "data": "X: -8.12 \t Y: -6.12 \t Z: -0.47\nroll: -94.40 \t pitch: 52.92 \n",
+    "label": "running"
   },
   {
     "timestamp": "2026-04-11T18:16:56.566Z",
     "source": "accelerometer",
-    "data": "X: -7.18 \t Y: -6.12 \t Z: -1.73\nroll: -105.75 \t pitch: 48.47 \n"
+    "data": "X: -7.18 \t Y: -6.12 \t Z: -1.73\nroll: -105.75 \t pitch: 48.47 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:57.065Z",
     "source": "accelerometer",
-    "data": "X: -7.26 \t Y: -6.94 \t Z: -1.73\nroll: -103.96 \t pitch: 45.41 \n"
+    "data": "X: -7.26 \t Y: -6.94 \t Z: -1.73\nroll: -103.96 \t pitch: 45.41 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:57.569Z",
     "source": "accelerometer",
-    "data": "X: -7.49 \t Y: -6.24 \t Z: -1.33\nroll: -102.07 \t pitch: 49.59 \n"
+    "data": "X: -7.49 \t Y: -6.24 \t Z: -1.33\nroll: -102.07 \t pitch: 49.59 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:58.062Z",
     "source": "accelerometer",
-    "data": "X: -7.81 \t Y: -6.79 \t Z: -1.37\nroll: -101.44 \t pitch: 48.43 \n"
+    "data": "X: -7.81 \t Y: -6.79 \t Z: -1.37\nroll: -101.44 \t pitch: 48.43 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:58.565Z",
     "source": "accelerometer",
-    "data": "X: -7.53 \t Y: -6.83 \t Z: -1.06\nroll: -98.82 \t pitch: 47.48 \n"
+    "data": "X: -7.53 \t Y: -6.83 \t Z: -1.06\nroll: -98.82 \t pitch: 47.48 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:59.067Z",
     "source": "accelerometer",
-    "data": "X: -7.14 \t Y: -7.02 \t Z: -1.14\nroll: -99.20 \t pitch: 45.11 \n"
+    "data": "X: -7.14 \t Y: -7.02 \t Z: -1.14\nroll: -99.20 \t pitch: 45.11 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:16:59.578Z",
     "source": "accelerometer",
-    "data": "X: -7.41 \t Y: -6.51 \t Z: -1.02\nroll: -98.90 \t pitch: 48.36 \n"
+    "data": "X: -7.41 \t Y: -6.51 \t Z: -1.02\nroll: -98.90 \t pitch: 48.36 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:00.090Z",
     "source": "accelerometer",
-    "data": "X: -7.34 \t Y: -6.83 \t Z: -1.22\nroll: -100.10 \t pitch: 46.62 \n"
+    "data": "X: -7.34 \t Y: -6.83 \t Z: -1.22\nroll: -100.10 \t pitch: 46.62 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:00.565Z",
     "source": "accelerometer",
-    "data": "X: -7.26 \t Y: -6.55 \t Z: -1.29\nroll: -101.18 \t pitch: 47.38 \n"
+    "data": "X: -7.26 \t Y: -6.55 \t Z: -1.29\nroll: -101.18 \t pitch: 47.38 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:01.160Z",
     "source": "accelerometer",
-    "data": "X: -7.22 \t Y: -6.94 \t Z: -1.37\nroll: -101.19 \t pitch: 45.56 \n"
+    "data": "X: -7.22 \t Y: -6.94 \t Z: -1.37\nroll: -101.19 \t pitch: 45.56 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:01.578Z",
     "source": "accelerometer",
-    "data": "X: -7.57 \t Y: -7.10 \t Z: -1.29\nroll: -100.33 \t pitch: 46.37 \n"
+    "data": "X: -7.57 \t Y: -7.10 \t Z: -1.29\nroll: -100.33 \t pitch: 46.37 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:02.076Z",
     "source": "accelerometer",
-    "data": "X: -7.26 \t Y: -7.06 \t Z: -1.57\nroll: -102.53 \t pitch: 45.09 \n"
+    "data": "X: -7.26 \t Y: -7.06 \t Z: -1.57\nroll: -102.53 \t pitch: 45.09 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:02.573Z",
     "source": "accelerometer",
-    "data": "X: -7.26 \t Y: -6.32 \t Z: -1.18\nroll: -100.56 \t pitch: 48.48 \n"
+    "data": "X: -7.26 \t Y: -6.32 \t Z: -1.18\nroll: -100.56 \t pitch: 48.48 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:03.075Z",
     "source": "accelerometer",
-    "data": "X: -7.34 \t Y: -6.79 \t Z: -1.49\nroll: -102.39 \t pitch: 46.55 \n"
+    "data": "X: -7.34 \t Y: -6.79 \t Z: -1.49\nroll: -102.39 \t pitch: 46.55 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:03.576Z",
     "source": "accelerometer",
-    "data": "X: -7.37 \t Y: -6.67 \t Z: -1.33\nroll: -101.31 \t pitch: 47.32 \n"
+    "data": "X: -7.37 \t Y: -6.67 \t Z: -1.33\nroll: -101.31 \t pitch: 47.32 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:04.081Z",
     "source": "accelerometer",
-    "data": "X: -7.14 \t Y: -7.10 \t Z: -1.53\nroll: -102.16 \t pitch: 44.51 \n"
+    "data": "X: -7.14 \t Y: -7.10 \t Z: -1.53\nroll: -102.16 \t pitch: 44.51 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:04.591Z",
     "source": "accelerometer",
-    "data": "X: -7.73 \t Y: -6.98 \t Z: -0.94\nroll: -97.68 \t pitch: 47.64 \n"
+    "data": "X: -7.73 \t Y: -6.98 \t Z: -0.94\nroll: -97.68 \t pitch: 47.64 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:05.075Z",
     "source": "accelerometer",
-    "data": "X: -7.18 \t Y: -6.43 \t Z: -1.06\nroll: -99.35 \t pitch: 47.75 \n"
+    "data": "X: -7.18 \t Y: -6.43 \t Z: -1.06\nroll: -99.35 \t pitch: 47.75 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:05.593Z",
     "source": "accelerometer",
-    "data": "X: -6.98 \t Y: -6.47 \t Z: -1.84\nroll: -105.90 \t pitch: 46.05 \n"
+    "data": "X: -6.98 \t Y: -6.47 \t Z: -1.84\nroll: -105.90 \t pitch: 46.05 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:06.086Z",
     "source": "accelerometer",
-    "data": "X: -6.90 \t Y: -6.43 \t Z: -1.53\nroll: -103.38 \t pitch: 46.23 \n"
+    "data": "X: -6.90 \t Y: -6.43 \t Z: -1.53\nroll: -103.38 \t pitch: 46.23 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:06.594Z",
     "source": "accelerometer",
-    "data": "X: -6.94 \t Y: -7.57 \t Z: -0.82\nroll: -96.21 \t pitch: 42.36 \n"
+    "data": "X: -6.94 \t Y: -7.57 \t Z: -0.82\nroll: -96.21 \t pitch: 42.36 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:07.083Z",
     "source": "accelerometer",
-    "data": "X: -5.18 \t Y: -8.39 \t Z: 4.59\nroll: -61.33 \t pitch: 28.42 \n"
+    "data": "X: -5.18 \t Y: -8.39 \t Z: 4.59\nroll: -61.33 \t pitch: 28.42 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:07.583Z",
     "source": "accelerometer",
-    "data": "X: -4.31 \t Y: -6.90 \t Z: 5.37\nroll: -52.10 \t pitch: 26.25 \n"
+    "data": "X: -4.31 \t Y: -6.90 \t Z: 5.37\nroll: -52.10 \t pitch: 26.25 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:08.084Z",
     "source": "accelerometer",
-    "data": "X: -4.98 \t Y: -7.92 \t Z: 4.24\nroll: -61.87 \t pitch: 29.01 \n"
+    "data": "X: -4.98 \t Y: -7.92 \t Z: 4.24\nroll: -61.87 \t pitch: 29.01 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:08.596Z",
     "source": "accelerometer",
-    "data": "X: -4.55 \t Y: -8.43 \t Z: 0.63\nroll: -85.74 \t pitch: 28.28 \n"
+    "data": "X: -4.55 \t Y: -8.43 \t Z: 0.63\nroll: -85.74 \t pitch: 28.28 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:09.095Z",
     "source": "accelerometer",
-    "data": "X: -7.61 \t Y: -7.30 \t Z: 3.26\nroll: -65.95 \t pitch: 43.61 \n"
+    "data": "X: -7.61 \t Y: -7.30 \t Z: 3.26\nroll: -65.95 \t pitch: 43.61 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:09.585Z",
     "source": "accelerometer",
-    "data": "X: -6.47 \t Y: -7.69 \t Z: 1.61\nroll: -78.19 \t pitch: 39.49 \n"
+    "data": "X: -6.47 \t Y: -7.69 \t Z: 1.61\nroll: -78.19 \t pitch: 39.49 \n",
+    "label": "stationary"
   },
   {
     "timestamp": "2026-04-11T18:17:10.090Z",
     "source": "accelerometer",
-    "data": "X: -8.87 \t Y: -5.18 \t Z: 0.27\nroll: -86.96 \t pitch: 59.68 \n"
+    "data": "X: -8.87 \t Y: -5.18 \t Z: 0.27\nroll: -86.96 \t pitch: 59.68 \n",
+    "label": "stationary"
   }
 ]
