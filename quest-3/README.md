@@ -21,15 +21,16 @@ To build our solution, we designed a cyber-physical pipeline that integrates a w
 <p align="center">
 
 ### Quest Summary
-We found that sensor placement significantly impacted our model's initial performance: arm-mounted data achieved 80% training accuracy, while leg data reached only 60%. However, during live testing with the arm-mounted sensor, the real-time predictions proved highly inaccurate. We suspect this failure was due to the model either overfitting to our specific training dataset or underfitting the natural variance of live human motion. Additionally, the leg data presented its own challenges, containing complex, overlapping motion artifacts during transitional movements. If we were to repeat this quest, we would focus on improving our model's real-world generalization by collecting a much larger, more diverse ground-truth dataset using the MoCap system, optimizing our sliding window size, and applying stronger signal filtering to the UDP stream.
+We found that the real-time predictions were highly inaccurate despite our initial training efforts. Specifically, the model struggled with significant misclassifications: when a user was completely stationary, the dashboard would frequently register the activity as "walking," and it rarely ever successfully classified the "running" state. We suspect these failures occurred because the model overfit to our limited training dataset and struggled to parse the amplitude thresholds and noisy artifacts of live human motion. If we were to repeat this quest, we would focus on improving the model's real-world generalization by collecting a much larger, more diverse ground-truth dataset using the MoCap system. Additionally, we would optimize our sliding window size and apply stronger low-pass filtering to the UDP stream to eliminate the minor baseline sensor noise that caused standing to be read as active movement.
 
 ### Supporting Artifacts
 - [Link to video technical presentation](). Not to exceed 120s
 - [Link to video demo](). Not to exceed 120s
 
-###Investigative Question
+### Investigative Question
 How does sensor placement and motion variability affect activity recognition performance? Compare at least two mounting locations or motion styles and explain the observed differences.
 
+Where you place the sensor changes how well the tracker works in the real world. Our arm sensor reached 80% accuracy in training because the movements were clear. However, it failed in live testing because people move their arms randomly (like when talking), which confused the model. On the other hand, the leg sensor only hit 60% training accuracy because heavy footsteps create messy, noisy data that our model struggled to read. Even though leg data is noisier, it is much better for tracking movement because legs are only used for getting around, not random gestures. Ultimately, arm sensors give clear data but cause too many false alarms, while leg sensors give messy data that truly matches the activity and just needs better filtering to work well.
 
 ### Self-Assessment 
 
