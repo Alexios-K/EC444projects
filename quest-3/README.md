@@ -24,8 +24,8 @@ To build our solution, we designed a cyber-physical pipeline that integrates a w
 We found that the real-time predictions were highly inaccurate despite our initial training efforts. Specifically, the model struggled with significant misclassifications: when a user was completely stationary, the dashboard would frequently register the activity as "walking," and it rarely ever successfully classified the "running" state. We suspect these failures occurred because the model overfit to our limited training dataset and struggled to parse the amplitude thresholds and noisy artifacts of live human motion. If we were to repeat this quest, we would focus on improving the model's real-world generalization by collecting a much larger, more diverse ground-truth dataset using the MoCap system. Additionally, we would optimize our sliding window size and apply stronger low-pass filtering to the UDP stream to eliminate the minor baseline sensor noise that caused standing to be read as active movement.
 
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
-- [Link to video demo](). Not to exceed 120s
+- [Link to video technical presentation](https://drive.google.com/file/d/1xLcr6-4a8_7tLIEeNShtUUjYCZFw6-69/view?usp=drive_link). Not to exceed 120s
+- [Link to video demo](https://drive.google.com/file/d/17vkYy2PY7bbkB22qBf2SarPniYoA5KkR/view?usp=sharing). Not to exceed 120s
 
 ### Investigative Question
 How does sensor placement and motion variability affect activity recognition performance? Compare at least two mounting locations or motion styles and explain the observed differences.
