@@ -12,11 +12,13 @@ Our group learned to bridge the gap between raw hardware signals and high-level 
 To build our solution, we designed a cyber-physical pipeline that integrates a wearable hardware node with a centralized software server. On the hardware side, we interfaced an ESP32 with an MPU6050 IMU via I2C to capture real-time motion data, mounting the device on the ankle to maximize the distinctiveness of gait patterns. The data flow begins with the ESP32 sampling accelerometer and gyroscope axes and transmitting raw readings as JSON packets over UDP to a Raspberry Pi Node.js server to ensure minimal latency. The software architecture utilizes a dual-path approach: the server logs incoming streams to a CSV for dataset curation while simultaneously pushing live data to a web dashboard via WebSockets. The control flow is managed by a state machine on the ESP32 that handles WiFi connectivity and continuous streaming, paired with a TensorFlow.js inference engine on the frontend that classifies activities—stationary, walking, running, or turning—in real time. Finally, we visualized these signals using CanvasJS, providing a live feedback loop that displays both the raw waveforms and the model's classification confidence.
 
 <p align="center">
-<img src="./images/ece444.png" width="50%">
+<img src="./images/IMG_0065.JPEG" width="50%">
 </p>
 <p align="center">
-Template for Including Graphics
+<p align="center">
+<img src="./images/IMG_0066.JPEG" width="50%">
 </p>
+<p align="center">
 
 ### Quest Summary
 Summarize your results and call out any challenges or things you would
