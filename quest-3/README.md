@@ -21,25 +21,27 @@ To build our solution, we designed a cyber-physical pipeline that integrates a w
 <p align="center">
 
 ### Quest Summary
-Summarize your results and call out any challenges or things you would
-have done differently.
-
+We found that sensor placement significantly impacted our model's initial performance: arm-mounted data achieved 80% training accuracy, while leg data reached only 60%. However, during live testing with the arm-mounted sensor, the real-time predictions proved highly inaccurate. We suspect this failure was due to the model either overfitting to our specific training dataset or underfitting the natural variance of live human motion. Additionally, the leg data presented its own challenges, containing complex, overlapping motion artifacts during transitional movements. If we were to repeat this quest, we would focus on improving our model's real-world generalization by collecting a much larger, more diverse ground-truth dataset using the MoCap system, optimizing our sliding window size, and applying stronger signal filtering to the UDP stream.
 
 ### Supporting Artifacts
 - [Link to video technical presentation](). Not to exceed 120s
 - [Link to video demo](). Not to exceed 120s
 
+###Investigative Question
+How does sensor placement and motion variability affect activity recognition performance? Compare at least two mounting locations or motion styles and explain the observed differences.
+
+
 ### Self-Assessment 
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Objective One |  |  1     | 
-| Objective Two |  |  1     | 
-| Objective Three |  |  1     | 
-| Objective Four |  |  1     | 
-| Objective Five |  |  1     | 
-| Objective Six |  |  1     | 
-| Objective Seven |  |  1     | 
+| Objective One | 1 |  1     | 
+| Objective Two | 1 |  1     | 
+| Objective Three | 1 |  1     | 
+| Objective Four | 1 |  1     | 
+| Objective Five | 1 |  1     | 
+| Objective Six | 1 |  1     | 
+| Objective Seven | 1 |  1     | 
 
 
 
