@@ -1,4 +1,4 @@
-#From Motion to Meaning
+# From Motion to Meaning
 
 Authors: Jason Redick, Alexios Kontothanassis, Ivan Chen
 
