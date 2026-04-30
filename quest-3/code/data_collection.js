@@ -14,7 +14,7 @@ const PORT = 41234;
 
 // Array to store incoming data before writing to JSON
 const sensorDataLog = [];
-const OUTPUT_FILE = 'sensor_data.json';
+const OUTPUT_FILE = 'new_arm_data.json';
 
 // Helper function to handle saving logic
 function logData(source, rawData) {
