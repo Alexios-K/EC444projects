@@ -5,8 +5,16 @@ Gemfile.lock
 Gemfile
 *.*~
 *~
-build
-node_modules
+build/
+node_modules/
+dist/
+.pio/
+.vscode/
+
+# Local environment files
+.env
+.env.*
+!.env.example
 
 ### macOS ###
 *.DS_Store
@@ -65,6 +73,12 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-#Npm package files
-package-lock.json
-package.json
+# ESP-IDF generated files
+sdkconfig.old
+managed_components/
+
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
